@@ -808,7 +808,8 @@ h1 em{font-style:normal;color:var(--primary)}
 <label>
   E-mail <span style="font-weight:500;color:#4B5F67">(ou téléphone)</span>
   <input autocomplete="email" name="email" placeholder="exemple@email.fr" type="email"/>
-</label><label>Commune *<input name="city" placeholder="Ex. Saint-Pierre" required="" type="text"/></label></div><div class="form-actions" style="justify-content:space-between;gap:12px"><button class="btn btn-outline" id="backBtn" type="button">Retour</button><button class="btn btn-primary" type="submit">Recevoir mon conseil personnalisé</button></div><p class="privacy">Vos coordonnées servent uniquement à répondre à votre demande et à vous recontacter. Pas de démarchage forcé.</p></div><div class="success hidden" id="success">
+</label><label>Commune *<input name="city" placeholder="Ex. Saint-Pierre" required="" type="text"/></label></div><div class="form-actions" style="justify-content:space-between;gap:12px"><button class="btn btn-outline" id="backBtn" type="button">Retour</button><button class="btn btn-primary" type="submit">Recevoir mon conseil personnalisé</button></div><p class="privacy">Vos coordonnées servent uniquement à répondre à votre demande et à vous recontacter. Pas de démarchage forcé.</p></div>
+  <div class="success hidden" id="success">
 
   <div class="success-badge">✓</div>
 
@@ -818,22 +819,43 @@ h1 em{font-style:normal;color:var(--primary)}
     Vos réponses permettront de mieux comprendre votre besoin avant la prise de contact.
   </p>
 
-  <p>
-    <strong>Marc — Conseiller AquaRun</strong>
-  </p>
+  <p><strong>Marc — Conseiller AquaRun</strong></p>
 
   <div class="direct-contact-panel">
 
     <p class="direct-contact-panel__title">
-      Vous souhaitez échanger tout de suite ?
+      Vous souhaitez échanger directement avec moi ?
     </p>
 
     <p class="direct-contact-panel__text">
-      Votre demande est déjà enregistrée. Vous pouvez aussi me contacter directement.
+      Vous pouvez aussi m’appeler ou m’écrire sur WhatsApp.
     </p>
 
-    
+    <div class="direct-contact-actions">
+
+      <a
+        class="direct-contact-btn direct-contact-btn-phone"
+        href="tel:+262693415391"
+        data-direct-contact="phone"
+      >
+        ☎ Appeler Marc
+      </a>
+
+      <a
+        class="direct-contact-btn direct-contact-btn-whatsapp"
+        href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20souhaite%20me%20renseigner%20sur%20les%20diff%C3%A9rentes%20solutions%20de%20filtration%20et%20mieux%20comprendre%20ce%20qui%20pourrait%20%C3%AAtre%20adapt%C3%A9%20%C3%A0%20mon%20foyer.%20Pouvez-vous%20me%20conseiller%20%3F"
+        target="_blank"
+        rel="noopener"
+        data-direct-contact="whatsapp"
+      >
+        Me renseigner sur WhatsApp
+      </a>
+
+    </div>
+
   </div>
+
+</div>
 
 </div></form></div></section>
 </main>
