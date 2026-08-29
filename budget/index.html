@@ -860,22 +860,58 @@ h1 em{font-style:normal;color:var(--primary)}
 </div></form></div></section>
 </main>
 <iframe name="crm_sink" id="crm_sink" title="Transmission CRM" style="display:none"></iframe>
-<footer class="footer">
-  <div class="wrap footer-inner">
+.footer{
+  border-top:1px solid var(--line);
+  background:#fff;
+}
 
-    <div class="footer-brand">
-      <img alt="AquaRun" class="footer-logo" src="../assets/aquarun-logo.png"/>
-      <span class="footer-signature">
-        FILTRATION &amp; TRAITEMENT DE L’EAU
-      </span>
-    </div>
+.footer-inner{
+  min-height:96px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  padding:20px 0;
+}
 
-    <span>Marc — Conseiller AquaRun</span>
+.footer-brand{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:6px;
+}
 
-    <span>Conseil et accompagnement à La Réunion</span>
+.footer-logo{
+  width:150px;
+  height:auto;
+  margin:0;
+}
 
-  </div>
-</footer>
+.footer-signature{
+  display:block;
+  font-size:12px;
+  letter-spacing:.08em;
+  color:var(--secondary);
+}
+
+.footer-meta{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:6px;
+  text-align:right;
+  color:var(--muted);
+}
+
+.footer-name{
+  font-size:18px;
+  font-weight:700;
+  color:var(--secondary);
+}
+
+.footer-location{
+  font-size:14px;
+}
 
 <script>
 window.dataLayer=window.dataLayer||[];
