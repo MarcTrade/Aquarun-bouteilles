@@ -584,6 +584,73 @@ h1 em{font-style:normal;color:var(--primary)}
   }
 }
 </style>
+ <style id="aquarun-contact-direct">
+.direct-contact-panel{
+  margin-top:20px;
+  padding:16px;
+  border:1px solid #DCE9ED;
+  border-radius:12px;
+  background:linear-gradient(180deg,#FFFFFF,#F7FBFC);
+}
+
+.direct-contact-panel__title{
+  margin:0 0 4px;
+  color:#102A36;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.35;
+}
+
+.direct-contact-panel__text{
+  margin:0 0 12px;
+  color:#4B5F67;
+  font-size:12.5px;
+  line-height:1.45;
+}
+
+.direct-contact-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+}
+
+.direct-contact-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:780;
+}
+
+.direct-contact-btn-phone{
+  background:#FFFFFF;
+  border:1px solid #9CCED9;
+  color:#007C9E;
+}
+
+.direct-contact-btn-whatsapp{
+  background:#EAF7FA;
+  border:1px solid #B7E2EA;
+  color:#102A36;
+}
+
+@media(max-width:620px){
+  .direct-contact-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+
+  .direct-contact-btn{
+    width:100%;
+    min-height:46px;
+  }
+}
+</style> 
 </head>
 <body>
 <header class="header">
@@ -649,7 +716,54 @@ h1 em{font-style:normal;color:var(--primary)}
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M20 7v5h-5"></path><path d="M4 17v-5h5"></path><path d="M6.1 9A7 7 0 0 1 18 6l2 1M4 17l2 1a7 7 0 0 0 11.9-3"></path></svg></span><h3>Et l’année prochaine ?</h3><p>Si vos habitudes restent les mêmes, le cycle d’achat recommence.</p></article>
 </div></div></section>
 <section class="section soft" id="solution"><div class="wrap"><div class="solution-card"><div><img alt="Eau qui coule du robinet dans un verre" src="../assets/photo-robinet.png"/></div><div class="solution-copy"><h2><span class="number">3.</span>Et si une solution de filtration adaptée réduisait votre recours aux bouteilles&nbsp;?</h2><p>AquaRun propose plusieurs solutions de filtration. Le bon choix dépend de votre foyer, de votre logement, de vos usages et de votre budget. L’objectif est d’abord de comprendre votre besoin avant de vous orienter vers la solution adaptée.</p><div class="benefits"><div class="benefit"><span class="check">✓</span><div><strong>Moins de bouteilles à acheter</strong><p>Réduire progressivement la fréquence de vos achats de bouteilles.</p></div></div><div class="benefit"><span class="check">✓</span><div><strong>De l’eau filtrée à la maison</strong><p>Disposer d’une eau filtrée au quotidien avec une solution choisie selon vos usages.</p></div></div><div class="benefit"><span class="check">✓</span><div><strong>Une solution adaptée à votre budget</strong><p>Le choix de la filtration tient compte de vos besoins, de votre logement et de votre budget.</p></div></div></div><a class="btn btn-outline" data-track="solution_advisor" href="#conseil">Voir quelle solution de filtration pourrait me convenir ↓</a></div></div></div></section>
-<section class="section surface" id="conseil"><div class="wrap advisor"><div class="advisor-main"><h2><span class="number">4.</span>La bonne solution dépend de votre foyer</h2><p>Il n’existe pas une filtration unique adaptée à tout le monde. L’objectif est d’abord de comprendre vos habitudes, votre logement et ce que vous attendez réellement de votre eau avant de vous orienter vers une solution adaptée.</p><div class="proofs"><div class="proof"><strong>Depuis 20 ans</strong><span>AquaRun à la Réunion</span></div><div class="proof"><strong>+15 000</strong><span>foyers équipés par AquaRun</span></div><div class="proof"><strong>+7 ans</strong><span>Marc conseiller aux côtés d’AquaRun</span></div><div class="proof"><strong>Plusieurs solutions</strong><span>Filtres et filtrations adaptés à vos besoins et à votre budget.</span></div></div></div><div class="photo-card"><div class="photo-slot"><div><strong>Votre photo ici</strong>Remplacez simplement l’image prévue par votre vraie photo de Marc.</div></div><div class="photo-text"><p><strong>Je suis Marc,</strong><br/><span class="blue"><strong>Conseiller AquaRun à La Réunion.</strong></span></p><p>J’accompagne chaque foyer pour comprendre ses besoins et l’orienter vers une solution adaptée, avec un conseil personnalisé, une installation maîtrisée et un suivi de proximité.</p></div></div></div></section>
+<section class="section surface" id="conseil"><div class="wrap advisor"><div class="advisor-main"><h2><span class="number">4.</span>La bonne solution dépend de votre foyer</h2><p>Il n’existe pas une filtration unique adaptée à tout le monde. L’objectif est d’abord de comprendre vos habitudes, votre logement et ce que vous attendez réellement de votre eau avant de vous orienter vers une solution adaptée.</p><div class="proofs"><div class="proof"><strong>Depuis 20 ans</strong><span>AquaRun à la Réunion</span></div><div class="proof"><strong>+15 000</strong><span>foyers équipés par AquaRun</span></div><div class="proof"><strong>+7 ans</strong><span>Marc conseiller aux côtés d’AquaRun</span></div><div class="proof"><strong>Plusieurs solutions</strong><span>Filtres et filtrations adaptés à vos besoins et à votre budget.</span></div></div></div><div class="photo-card"><div class="photo-slot"><div><strong>Votre photo ici</strong>Remplacez simplement l’image prévue par votre vraie photo de Marc.</div></div><div class="photo-text">
+
+  <p>
+    <strong>Je suis Marc,</strong><br/>
+    <span class="blue">
+      <strong>Conseiller AquaRun à La Réunion.</strong>
+    </span>
+  </p>
+
+  <p>
+    J’accompagne chaque foyer pour comprendre ses besoins et l’orienter vers une solution adaptée, avec un conseil personnalisé, une installation maîtrisée et un suivi de proximité.
+  </p>
+
+  <div class="direct-contact-panel">
+
+    <p class="direct-contact-panel__title">
+      Vous préférez échanger directement avec moi ?
+    </p>
+
+    <p class="direct-contact-panel__text">
+      Un appel ou un message suffit pour poser votre question.
+    </p>
+
+    <div class="direct-contact-actions">
+
+      <a
+        class="direct-contact-btn direct-contact-btn-phone"
+        href="tel:+262693415391"
+        data-direct-contact="phone"
+      >
+        ☎ Appeler Marc
+      </a>
+
+      <a
+        class="direct-contact-btn direct-contact-btn-whatsapp"
+        href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20viens%20de%20la%20page%20Budget%20AquaRun%20et%20je%20souhaite%20un%20conseil."
+        target="_blank"
+        rel="noopener"
+        data-direct-contact="whatsapp"
+      >
+        WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</div></div></div></section>
 <section class="section soft" id="formulaire"><div class="narrow"><div class="section-title"><h2><span class="number">5.</span>Quelle solution serait adaptée à votre foyer ?</h2><p>Trois réponses rapides suffisent pour préparer un conseil plus pertinent.</p></div><form class="form-card" id="leadForm" novalidate="" action="https://script.google.com/macros/s/AKfycbzNAwXho382vhEBPrOIVzdPO7IPKxFPXIdyvPSbeU5fZM6YI1hoeApf0eESioTwotgJ/exec" method="post" target="crm_sink">
 <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"/>
 <input type="hidden" name="mode" id="crm_mode" value="packs"/>
@@ -668,7 +782,55 @@ h1 em{font-style:normal;color:var(--primary)}
   <strong>Vos réponses me permettent déjà de mieux comprendre votre situation.</strong>
   <span>Indiquez simplement comment Marc peut vous recontacter pour vous conseiller.</span>
 </div>
-<div class="contacts"><label>Prénom et nom *<input autocomplete="name" name="firstname" placeholder="Ex. Jean Payet" required="" type="text"/></label><label>Téléphone *<input autocomplete="tel" name="phone" placeholder="06 92 00 00 00" required="" type="tel"/></label><label>Commune *<input name="city" placeholder="Ex. Saint-Pierre" required="" type="text"/></label><div class="contact-mode"><strong>Mode de contact préféré *</strong><div class="inline"><label class="choice"><input name="contact" required="" type="radio" value="tel"/>Téléphone</label><label class="choice"><input name="contact" type="radio" value="wa"/>WhatsApp</label></div></div></div><div class="form-actions" style="justify-content:space-between;gap:12px"><button class="btn btn-outline" id="backBtn" type="button">Retour</button><button class="btn btn-primary" type="submit">Recevoir mon conseil personnalisé</button></div><p class="privacy">Vos coordonnées servent uniquement à répondre à votre demande et à vous recontacter. Pas de démarchage forcé.</p></div><div class="success hidden" id="success"><div class="success-badge">✓</div><h3>Merci, votre demande est enregistrée.</h3><p>Vos réponses permettront de mieux comprendre votre besoin avant la prise de contact.</p><p><strong>Marc — Conseiller AquaRun</strong></p></div></form></div></section>
+<div class="contacts"><label>Prénom et nom *<input autocomplete="name" name="firstname" placeholder="Ex. Jean Payet" required="" type="text"/></label><label>Téléphone *<input autocomplete="tel" name="phone" placeholder="06 92 00 00 00" required="" type="tel"/></label><label>Commune *<input name="city" placeholder="Ex. Saint-Pierre" required="" type="text"/></label><div class="contact-mode"><strong>Mode de contact préféré *</strong><div class="inline"><label class="choice"><input name="contact" required="" type="radio" value="tel"/>Téléphone</label><label class="choice"><input name="contact" type="radio" value="wa"/>WhatsApp</label></div></div></div><div class="form-actions" style="justify-content:space-between;gap:12px"><button class="btn btn-outline" id="backBtn" type="button">Retour</button><button class="btn btn-primary" type="submit">Recevoir mon conseil personnalisé</button></div><p class="privacy">Vos coordonnées servent uniquement à répondre à votre demande et à vous recontacter. Pas de démarchage forcé.</p></div><div class="success hidden" id="success">
+
+  <div class="success-badge">✓</div>
+
+  <h3>Merci, votre demande est enregistrée.</h3>
+
+  <p>
+    Vos réponses permettront de mieux comprendre votre besoin avant la prise de contact.
+  </p>
+
+  <p>
+    <strong>Marc — Conseiller AquaRun</strong>
+  </p>
+
+  <div class="direct-contact-panel">
+
+    <p class="direct-contact-panel__title">
+      Vous souhaitez échanger tout de suite ?
+    </p>
+
+    <p class="direct-contact-panel__text">
+      Votre demande est déjà enregistrée. Vous pouvez aussi me contacter directement.
+    </p>
+
+    <div class="direct-contact-actions">
+
+      <a
+        class="direct-contact-btn direct-contact-btn-phone"
+        href="tel:+262693415391"
+        data-direct-contact="phone"
+      >
+        ☎ Appeler Marc
+      </a>
+
+      <a
+        class="direct-contact-btn direct-contact-btn-whatsapp"
+        href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20viens%20d%27envoyer%20ma%20demande%20via%20la%20page%20Budget%20AquaRun."
+        target="_blank"
+        rel="noopener"
+        data-direct-contact="whatsapp"
+      >
+        WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</div></form></div></section>
 </main>
 <iframe name="crm_sink" id="crm_sink" title="Transmission CRM" style="display:none"></iframe>
 <footer class="footer">
@@ -753,6 +915,16 @@ q('#calcBtn').addEventListener('click',()=>{
   },120);
 });
 qa('[data-track]').forEach(a=>a.addEventListener('click',()=>window.dataLayer.push({event:'cta_click',cta:a.dataset.track})));
+  qa('[data-direct-contact]').forEach(a=>a.addEventListener('click',()=>{
+  const channel=a.dataset.directContact;
+
+  window.dataLayer.push({
+    event:channel==='phone' ? 'click_phone' : 'click_whatsapp',
+    contact_channel:channel,
+    landing:'budget',
+    angle:'Budget'
+  });
+}));
 
 // Attribution invisible de la publicité vers le CRM.
 // Le design et le formulaire visible restent identiques à la V4.4.
