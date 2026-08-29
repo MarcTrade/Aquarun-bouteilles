@@ -518,10 +518,103 @@ h1 em{font-style:normal;color:var(--primary)}
   }
 }
 </style>
+<style>
+.brand-block{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
 
+.logo{
+  width:220px;
+  height:auto;
+}
+
+.brand-signature{
+  margin-top:2px;
+  font-size:9px;
+  letter-spacing:.12em;
+  line-height:1;
+  color:#102A36;
+  white-space:nowrap;
+  text-align:center;
+}
+
+.footer-brand{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-right:auto;
+}
+
+.footer-logo{
+  width:220px;
+  height:auto;
+  margin:0;
+}
+
+.footer-signature{
+  margin-top:-2px;
+  font-size:9px;
+  letter-spacing:.12em;
+  line-height:1;
+  color:#102A36;
+  white-space:nowrap;
+  text-align:center;
+}
+
+@media(max-width:620px){
+  .brand-block .logo{
+    width:180px;
+  }
+
+  .brand-signature{
+    font-size:7px;
+    letter-spacing:.09em;
+  }
+
+  .footer-logo{
+    width:170px;
+  }
+
+  .footer-signature{
+    font-size:7px;
+    letter-spacing:.09em;
+  }
+}
+</style>
 </head>
 <body>
-<header class="header"><div class="wrap header-inner"><img alt="AquaRun — Filtration &amp; traitement de l'eau" class="logo" src="../assets/aquarun-logo.png"/><div class="mini"><strong>Marc Jamin</strong>Conseiller AquaRun</div><div class="local"><span class="pin">⌖</span><span>Conseil et accompagnement<br/><strong>à La Réunion</strong></span></div></div></header>
+<header class="header">
+  <div class="wrap header-inner">
+
+    <div class="brand-block">
+      <img
+        alt="AquaRun"
+        class="logo"
+        src="../assets/aquarun-logo.png"
+      />
+      <span class="brand-signature">
+        FILTRATION &amp; TRAITEMENT DE L’EAU
+      </span>
+    </div>
+
+    <div class="mini">
+      <strong>Marc Jamin</strong>
+      Conseiller AquaRun
+    </div>
+
+    <div class="local">
+      <span class="pin">⌖</span>
+      <span>
+        Conseil et accompagnement<br/>
+        <strong>à La Réunion</strong>
+      </span>
+    </div>
+
+  </div>
+</header>
 <main>
 
 <section class="hero hero-budget-clean" id="top">
@@ -578,7 +671,21 @@ h1 em{font-style:normal;color:var(--primary)}
 <div class="contacts"><label>Prénom et nom *<input autocomplete="name" name="firstname" placeholder="Ex. Jean Payet" required="" type="text"/></label><label>Téléphone *<input autocomplete="tel" name="phone" placeholder="06 92 00 00 00" required="" type="tel"/></label><label>Commune *<input name="city" placeholder="Ex. Saint-Pierre" required="" type="text"/></label><div class="contact-mode"><strong>Mode de contact préféré *</strong><div class="inline"><label class="choice"><input name="contact" required="" type="radio" value="tel"/>Téléphone</label><label class="choice"><input name="contact" type="radio" value="wa"/>WhatsApp</label></div></div></div><div class="form-actions" style="justify-content:space-between;gap:12px"><button class="btn btn-outline" id="backBtn" type="button">Retour</button><button class="btn btn-primary" type="submit">Recevoir mon conseil personnalisé</button></div><p class="privacy">Vos coordonnées servent uniquement à répondre à votre demande et à vous recontacter. Pas de démarchage forcé.</p></div><div class="success hidden" id="success"><div class="success-badge">✓</div><h3>Merci, votre demande est enregistrée.</h3><p>Vos réponses permettront de mieux comprendre votre besoin avant la prise de contact.</p><p><strong>Marc — Conseiller AquaRun</strong></p></div></form></div></section>
 </main>
 <iframe name="crm_sink" id="crm_sink" title="Transmission CRM" style="display:none"></iframe>
-<footer class="footer"><div class="wrap footer-inner"><img alt="AquaRun" class="footer-logo" src="../assets/logo-aquarun.png"/><span>Marc — Conseiller AquaRun</span><span>Conseil et accompagnement à La Réunion</span></div></footer>
+<footer class="footer">
+  <div class="wrap footer-inner">
+
+    <div class="footer-brand">
+      <img alt="AquaRun" class="footer-logo" src="../assets/aquarun-logo.png"/>
+      <span class="footer-signature">
+        FILTRATION &amp; TRAITEMENT DE L’EAU
+      </span>
+    </div>
+
+    <span>Marc — Conseiller AquaRun</span>
+    <span>Conseil et accompagnement à La Réunion</span>
+
+  </div>
+</footer>
 <script>
 window.dataLayer=window.dataLayer||[];
 const q=s=>document.querySelector(s), qa=s=>[...document.querySelectorAll(s)];
