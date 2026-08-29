@@ -860,6 +860,7 @@ h1 em{font-style:normal;color:var(--primary)}
 </div></form></div></section>
 </main>
 <iframe name="crm_sink" id="crm_sink" title="Transmission CRM" style="display:none"></iframe>
+<style id="footer-balanced-v1">
 .footer{
   border-top:1px solid var(--line);
   background:#fff;
@@ -877,42 +878,99 @@ h1 em{font-style:normal;color:var(--primary)}
 .footer-brand{
   display:flex;
   flex-direction:column;
-  align-items:flex-start;
-  gap:6px;
+  align-items:center;
+  gap:4px;
+  margin-right:0;
 }
 
 .footer-logo{
-  width:150px;
+  width:170px;
   height:auto;
   margin:0;
 }
 
 .footer-signature{
   display:block;
-  font-size:12px;
-  letter-spacing:.08em;
-  color:var(--secondary);
+  font-size:8px;
+  letter-spacing:.09em;
+  color:#102A36;
+  text-align:center;
+  white-space:nowrap;
 }
 
 .footer-meta{
   display:flex;
   flex-direction:column;
   align-items:flex-end;
-  gap:6px;
+  gap:5px;
   text-align:right;
-  color:var(--muted);
 }
-<style>
+
 .footer-name{
-  font-size:18px;
+  font-size:16px;
   font-weight:700;
-  color:var(--secondary);
+  color:#102A36;
 }
 
 .footer-location{
-  font-size:14px;
+  font-size:13px;
+  color:#4B5F67;
 }
-  </style>
+
+@media(max-width:620px){
+  .footer-inner{
+    min-height:auto;
+    padding:26px 0;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    text-align:center;
+  }
+
+  .footer-brand{
+    margin:0;
+    align-items:center;
+  }
+
+  .footer-logo{
+    width:170px;
+    margin:0 auto;
+  }
+
+  .footer-meta{
+    align-items:center;
+    text-align:center;
+    gap:6px;
+  }
+
+  .footer-name{
+    font-size:16px;
+  }
+
+  .footer-location{
+    font-size:13px;
+  }
+}
+</style>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+
+    <div class="footer-brand">
+      <img alt="AquaRun" class="footer-logo" src="../assets/aquarun-logo.png"/>
+      <span class="footer-signature">
+        FILTRATION &amp; TRAITEMENT DE L’EAU
+      </span>
+    </div>
+
+    <div class="footer-meta">
+      <span class="footer-name">Marc — Conseiller AquaRun</span>
+      <span class="footer-location">Conseil et accompagnement à La Réunion</span>
+    </div>
+
+  </div>
+</footer>
 
 <script>
 window.dataLayer=window.dataLayer||[];
