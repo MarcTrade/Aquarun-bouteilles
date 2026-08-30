@@ -800,13 +800,19 @@ h1 em{font-style:normal;color:var(--primary)}
   <strong>Vos réponses me permettent déjà de mieux comprendre votre situation.</strong>
   <span>Laissez vos coordonnées pour que Marc puisse vous recontacter et vous conseiller.</span>
 </div>
-<div class="contacts"><label>Prénom et nom *<input autocomplete="name" name="firstname" placeholder="Ex. Jean Payet" required="" type="text"/></label><label>
-  Téléphone <span style="font-weight:500;color:#4B5F67">(ou e-mail)</span>
+<div class="contacts"><label>Nom et/ou Prénom *<input autocomplete="name" name="firstname" placeholder="Ex. Payet Marie" required="" type="text"/></label>
+  <div class="contact-choice">
+  <strong>Téléphone ou e-mail</strong>
+  <span>Renseignez au moins l’un des deux.</span>
+</div>
+
+<label>
+  Téléphone
   <input autocomplete="tel" name="phone" placeholder="06 92 00 00 00" type="tel"/>
 </label>
 
 <label>
-  E-mail <span style="font-weight:500;color:#4B5F67">(ou téléphone)</span>
+  E-mail
   <input autocomplete="email" name="email" placeholder="exemple@email.fr" type="email"/>
 </label><label>Commune *<input name="city" placeholder="Ex. Saint-Pierre" required="" type="text"/></label></div><div class="form-actions" style="justify-content:space-between;gap:12px"><button class="btn btn-outline" id="backBtn" type="button">Retour</button><button class="btn btn-primary" type="submit">Recevoir mon conseil personnalisé</button></div><p class="privacy">Vos coordonnées servent uniquement à répondre à votre demande et à vous recontacter. Pas de démarchage forcé.</p></div>
   <div class="success hidden" id="success">
@@ -821,40 +827,15 @@ h1 em{font-style:normal;color:var(--primary)}
 
   <p><strong>Marc — Conseiller AquaRun</strong></p>
 
-  <div class="direct-contact-panel">
+  #success .direct-contact-actions{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
 
-    <p class="direct-contact-panel__title">
-      Vous souhaitez échanger directement avec moi ?
-    </p>
-
-    <p class="direct-contact-panel__text">
-      Vous pouvez aussi m’appeler ou m’écrire sur WhatsApp.
-    </p>
-
-    <div class="direct-contact-actions">
-
-      <a
-        class="direct-contact-btn direct-contact-btn-phone"
-        href="tel:+262693415391"
-        data-direct-contact="phone"
-      >
-        ☎ Appeler Marc
-      </a>
-
-      <a
-        class="direct-contact-btn direct-contact-btn-whatsapp"
-        href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20souhaite%20me%20renseigner%20sur%20les%20diff%C3%A9rentes%20solutions%20de%20filtration%20et%20mieux%20comprendre%20ce%20qui%20pourrait%20%C3%AAtre%20adapt%C3%A9%20%C3%A0%20mon%20foyer.%20Pouvez-vous%20me%20conseiller%20%3F"
-        target="_blank"
-        rel="noopener"
-        data-direct-contact="whatsapp"
-      >
-        Me renseigner sur WhatsApp
-      </a>
-
-    </div>
-
-  </div>
-
+#success .direct-contact-btn{
+  width:100%;
+}
 </div>
 
 </div></form></div></section>
@@ -1083,6 +1064,7 @@ sink.addEventListener('load',()=>{
   crmSubmitted=false;
   q('#step2').classList.add('hidden');
   q('#success').classList.remove('hidden');
+  q('#conseil .direct-contact-panel')?.classList.add('hidden');
   submitBtn.disabled=false;
   submitBtn.textContent='Recevoir mon conseil personnalisé';
   window.dataLayer.push({event:'lead_form_submit'});
