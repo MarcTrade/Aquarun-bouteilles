@@ -580,7 +580,7 @@ h1 em{font-style:normal;color:var(--primary)}
     <span class="kicker">Moins de packs à gérer</span>
     <h1>Combien de packs d’eau gérez-vous <em>chaque mois</em>&nbsp;?</h1>
     <p class="lead">Courses, coffre, maison… puis quelques jours plus tard, il faut recommencer.</p>
-    <p class="lead-strong">A La Réunion, cette corvée finit aussi par peser sur votre budget.</p>
+    <p class="lead-strong">A La Réunion, acheter, transporter et stocker des packs d’eau peut vite devenir une vraie corvée au quotidien.</p>
     <a class="btn btn-primary" data-track="hero_calculator" href="#calculateur">Calculer ma consommation <span>↓</span></a>
     <div class="hero-proof">
       <span><i class="dot"></i>Conseil personnalisé</span>
@@ -591,7 +591,22 @@ h1 em{font-style:normal;color:var(--primary)}
 </div>
 <div class="hero-callout">Moins de contrainte,<br><strong>plus de confort au quotidien.</strong></div>
 </section>
-<section class="section soft" id="calculateur"><div class="narrow"><div class="section-title"><h2><span class="number">1.</span>Calculez votre consommation de bouteilles</h2><p>Renseignez vos habitudes pour visualiser combien de bouteilles passent chez vous au quotidien.</p></div><div class="calc-card"><div class="panel"><div class="panel-title">Votre consommation actuelle</div><div class="mode"><button class="active" data-mode="packs" type="button">Packs de bouteilles</button><button data-mode="five" type="button">Bouteilles de 5 L</button></div><div class="fields" id="packFields"><div class="field"><label for="packsWeek">Packs achetés par semaine</label><div class="control"><input id="packsWeek" min="0" step="0.5" type="number" value="3"/><span class="unit">packs</span></div></div><div class="field"><label for="packPrice">Prix moyen d’un pack</label><div class="control"><input id="packPrice" inputmode="decimal" value="4,50"/><span class="unit">€</span></div></div><div class="field"><label for="bottlesPack">Bouteilles dans un pack <span style="font-weight:500;color:#4B5F67">(optionnel)</span></label><div class="control"><input id="bottlesPack" min="1" step="1" type="number" value="6"/><span class="unit">bouteilles</span></div></div></div><div class="fields hidden" id="fiveFields"><div class="field"><label for="fiveWeek">Bouteilles de 5 L achetées par semaine</label><div class="control"><input id="fiveWeek" min="0" step="0.5" type="number" value="4"/><span class="unit">bouteilles</span></div></div><div class="field"><label for="fivePrice">Prix moyen d’une bouteille de 5 L</label><div class="control"><input id="fivePrice" inputmode="decimal" value="2,50"/><span class="unit">€</span></div></div></div><button class="btn btn-primary calc-btn" id="calcBtn" type="button">Voir mon estimation</button></div><div class="arrow">→</div><div aria-live="polite" class="panel result"><div class="panel-title" style="text-align:center">Votre budget bouteilles estimé</div><div class="numbers"><div><strong id="monthly">59 €</strong><span>par mois</span></div><div class="sep"></div><div><strong id="yearly">702 €</strong><span>par an</span></div></div><div class="secondary-result" id="count">Soit environ <strong>936 bouteilles</strong> achetées par an</div><div class="secondary-result hidden" id="volume"></div><p class="note">Estimation basée uniquement sur les informations renseignées. Elle ne représente pas une économie garantie avec une solution AquaRun.</p><a class="small-cta" data-track="calculator_next" href="#contraintes">Et au-delà du budget ? ↓</a></div></div></div></section>
+<section class="section soft" id="calculateur"><div class="narrow"><div class="section-title"><h2><span class="number">1.</span>Calculez votre consommation de bouteilles</h2><p>Renseignez vos habitudes pour visualiser combien de packs et de bouteilles passent chez vous sur une année.</p></div><div class="calc-card"><div class="panel"><div class="panel-title">Votre consommation actuelle</div><div class="mode"><button class="active" data-mode="packs" type="button">Packs de bouteilles</button><button data-mode="five" type="button">Bouteilles de 5 L</button></div><div class="fields" id="packFields"><div class="field"><label for="packsWeek">Packs achetés par semaine</label><div class="control"><input id="packsWeek" min="0" step="0.5" type="number" value="3"/><span class="unit">packs</span></div></div><div class="field"><label for="packPrice">Prix moyen d’un pack</label><div class="control"><input id="packPrice" inputmode="decimal" value="4,50"/><span class="unit">€</span></div></div><div class="field"><label for="bottlesPack">Bouteilles dans un pack <span style="font-weight:500;color:#4B5F67">(optionnel)</span></label><div class="control"><input id="bottlesPack" min="1" step="1" type="number" value="6"/><span class="unit">bouteilles</span></div></div></div><div class="fields hidden" id="fiveFields"><div class="field"><label for="fiveWeek">Bouteilles de 5 L achetées par semaine</label><div class="control"><input id="fiveWeek" min="0" step="0.5" type="number" value="4"/><span class="unit">bouteilles</span></div></div><div class="field"><label for="fivePrice">Prix moyen d’une bouteille de 5 L</label><div class="control"><input id="fivePrice" inputmode="decimal" value="2,50"/><span class="unit">€</span></div></div></div><button class="btn btn-primary calc-btn" id="calcBtn" type="button">Voir mon estimation</button></div><div class="arrow">→</div><div aria-live="polite" class="panel result"><div class="panel-title" style="text-align:center">Votre consommation estimée</div><div class="numbers">
+  <div>
+    <strong id="monthly">78</strong>
+    <span>bouteilles par mois</span>
+  </div>
+
+  <div class="sep"></div>
+
+  <div>
+    <strong id="yearly">936</strong>
+    <span>bouteilles par an</span>
+  </div>
+</div></div></div><div class="secondary-result" id="count">Soit environ <strong>936 bouteilles</strong> achetées par an</div><div class="secondary-result hidden" id="volume"></div><p class="note">
+  <strong>Vous visualisez maintenant ce que représentent vos achats.</strong><br>
+  Packs à acheter, transporter, rentrer et stocker : répétés toute l’année, ces gestes finissent par faire partie du quotidien.
+</p><a class="small-cta" data-track="calculator_next" href="#contraintes">Voir ce que cela représente au quotidien ↓a></div></div></div></section>
 <section class="section surface" id="contraintes"><div class="narrow"><div class="section-title"><h2><span class="number">2.</span>Ce n’est pas seulement une question de budget</h2></div><div class="routine">
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 4h2l2 11h10l3-8H6"></path><circle cx="9" cy="19" r="1.4"></circle><circle cx="17" cy="19" r="1.4"></circle></svg></span><h3>Acheter</h3><p>Penser aux bouteilles lors des courses.</p></article>
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M8 21v-7l2-3 1-5 3 1-1 4 3 2 2 7"></path><circle cx="12" cy="3.5" r="2"></circle><path d="M5 12h4"></path></svg></span><h3>Porter</h3><p>Du chariot au coffre, puis jusqu’à la maison.</p></article>
@@ -886,11 +901,13 @@ function calculate(showFeedback=false){
     annual=w*p*52; count=w*52; volume=count*5;
   }
   calcState={annual,monthly:annual/12,count,volume};
-  q('#monthly').textContent=eur(calcState.monthly);
-  q('#yearly').textContent=eur(calcState.annual);
-  q('#count').innerHTML=mode==='packs'
-    ? `Soit environ <strong>${formatInt(calcState.count)} bouteilles</strong> achetées par an`
-    : `Soit environ <strong>${formatInt(calcState.count)} bouteilles de 5 L</strong> achetées par an`;
+  const bottlesMonthly=calcState.count/12;
+
+q('#monthly').textContent=formatInt(bottlesMonthly);
+q('#yearly').textContent=formatInt(calcState.count);
+
+q('#count').innerHTML=
+  `Budget indicatif : <strong>${eur(calcState.monthly)} par mois</strong>, soit <strong>${eur(calcState.annual)} par an</strong>`;
   if(mode==='five'){
     q('#volume').classList.remove('hidden');
     q('#volume').innerHTML=`Soit environ <strong>${formatInt(calcState.volume)} litres</strong> achetés par an`;
