@@ -925,8 +925,6 @@ function groupValid(name){
   return !!document.querySelector(`input[name="${name}"]:checked`);
 }
 
-const directContactActions=q('#conseil .direct-contact-panel');
-
 q('#nextBtn').addEventListener('click',()=>{
 
   if(!['household','housing','timing'].every(groupValid)){
@@ -934,22 +932,18 @@ q('#nextBtn').addEventListener('click',()=>{
     return;
   }
 
+  q('#conseil .direct-contact-panel')?.classList.add('hidden');
+
   q('#step1').classList.add('hidden');
   q('#step2').classList.remove('hidden');
 
   q('#prog1').classList.remove('on');
   q('#prog2').classList.add('on');
 
-  if(directContactActions){
-    directContactActions.classList.add('hidden');
-  }
-
-  setTimeout(()=>{
-    q('#step2').scrollIntoView({
-      behavior:'smooth',
-      block:'start'
-    });
-  },50);
+  q('#formulaire').scrollIntoView({
+    behavior:'smooth',
+    block:'start'
+  });
 
   window.dataLayer.push({
     event:'form_step_1_complete'
@@ -965,14 +959,7 @@ q('#backBtn').addEventListener('click',()=>{
   q('#prog2').classList.remove('on');
   q('#prog1').classList.add('on');
 
-  if(directContactActions){
-    directContactActions.classList.remove('hidden');
-  }
-
-  q('#formulaire').scrollIntoView({
-    behavior:'smooth',
-    block:'start'
-  });
+  q('#conseil .direct-contact-panel')?.classList.remove('hidden');
 
 });
 
