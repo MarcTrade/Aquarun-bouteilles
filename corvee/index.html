@@ -666,6 +666,80 @@ h1 em{font-style:normal;color:var(--primary)}
   }
 }
 </style>
+  <style id="conseil-mobile-restore-final">
+
+@media(max-width:620px){
+
+  /* POINT 4 : retour au comportement mobile correct */
+
+  #conseil .advisor{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    width:100% !important;
+    gap:24px !important;
+  }
+
+  #conseil .advisor-main{
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  #conseil .photo-card{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    width:100% !important;
+    min-width:0 !important;
+    gap:24px !important;
+    padding:20px !important;
+  }
+
+  #conseil .photo-slot{
+    width:100% !important;
+    height:300px !important;
+  }
+
+  #conseil .photo-text{
+    display:block !important;
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  #conseil .photo-text > p{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin-bottom:20px !important;
+  }
+
+  #conseil .direct-contact-panel{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    padding:16px !important;
+  }
+
+  #conseil .direct-contact-panel__title,
+  #conseil .direct-contact-panel__text{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+  }
+
+  #conseil .direct-contact-actions{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:10px !important;
+    width:100% !important;
+  }
+
+  #conseil .direct-contact-btn{
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+}
+
+</style>
 </head>
 <body>
 <header class="header">
@@ -1090,6 +1164,60 @@ h1 em{font-style:normal;color:var(--primary)}
 }
 
 </style>
+  <section class="section soft" id="solution">
+  <div class="wrap">
+    <div class="corvee3">
+
+      <div class="corvee3-head">
+        <h2>
+          <span class="number">3.</span>
+          Et si vous aviez moins de bouteilles à gérer ?
+        </h2>
+
+        <p>
+          Selon vos besoins et vos habitudes, une solution de filtration adaptée
+          peut permettre de disposer d’une eau filtrée directement à la maison
+          et de réduire l’utilisation des bouteilles au quotidien.
+        </p>
+      </div>
+
+      <div class="corvee3-benefits">
+
+        <div class="corvee3-benefit">
+          <span class="corvee3-check">✓</span>
+          <div>
+            <strong>Moins de packs et de bouteilles</strong>
+            <p>Réduire la fréquence des achats à gérer.</p>
+          </div>
+        </div>
+
+        <div class="corvee3-benefit">
+          <span class="corvee3-check">✓</span>
+          <div>
+            <strong>Plus de simplicité</strong>
+            <p>Une eau filtrée disponible directement à la maison.</p>
+          </div>
+        </div>
+
+        <div class="corvee3-benefit">
+          <span class="corvee3-check">✓</span>
+          <div>
+            <strong>Moins de plastique</strong>
+            <p>Réduire progressivement le nombre de bouteilles utilisées par le foyer.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="corvee3-cta"
+         data-track="solution_advisor"
+         href="#conseil">
+        Comprendre quelle solution me conviendrait <span>↓</span>
+      </a>
+
+    </div>
+  </div>
+</section>
 <section class="section surface" id="conseil">
   <div class="wrap advisor">
 
