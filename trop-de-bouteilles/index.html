@@ -532,7 +532,60 @@ h1 em{font-style:normal;color:var(--primary)}
 </div>
 <div class="hero-callout">Moins de bouteilles, <strong>moins de plastique au quotidien.</strong></div>
 </section>
-<section class="section soft" id="calculateur"><div class="narrow"><div class="section-title"><h2><span class="number">1.</span>Calculez votre nombre de bouteilles</h2><p>Choisissez votre mode d’achat puis renseignez vos habitudes actuelles.</p></div><div class="calc-card"><div class="panel"><div class="panel-title">Votre utilisation actuelle</div><div class="mode"><button class="active" data-mode="packs" type="button">Packs de bouteilles</button><button data-mode="five" type="button">Bouteilles de 5 L</button></div><div class="fields" id="packFields"><div class="field"><label for="packsWeek">Packs utilisés par semaine</label><div class="control"><input id="packsWeek" min="0" step="0.5" type="number" value="3"/><span class="unit">packs</span></div></div><div class="field"><label for="bottlesPack">Bouteilles dans un pack <span style="font-weight:500;color:#4B5F67">(optionnel)</span></label><div class="control"><input id="bottlesPack" min="1" step="1" type="number" value="6"/><span class="unit">bouteilles</span></div></div></div><div class="fields hidden" id="fiveFields"><div class="field"><label for="fiveWeek">Bouteilles de 5 L utilisées par semaine</label><div class="control"><input id="fiveWeek" min="0" step="0.5" type="number" value="4"/><span class="unit">bouteilles</span></div></div></div><button class="btn btn-primary calc-btn" id="calcBtn" type="button">Voir mon estimation</button></div><div class="arrow">→</div><div aria-live="polite" class="panel result" id="resultat-estimation"><div class="panel-title" style="text-align:center">Votre utilisation estimée</div><div class="numbers"><div><strong id="monthly">78</strong><span>bouteilles / mois</span></div><div class="sep"></div><div><strong id="yearly">936</strong><span>bouteilles / an</span></div></div><div class="secondary-result" id="count">Soit environ <strong>936 bouteilles</strong> utilisées sur une année</div><div class="secondary-result hidden" id="volume"></div><p class="note"><strong>Vous avez maintenant votre chiffre.</strong><br/>Si vos habitudes restent les mêmes, ce nombre se répète année après année. Si vous souhaitez utiliser moins de bouteilles, une solution de filtration peut être étudiée selon votre foyer et vos usages.</p><a class="small-cta" data-track="calculator_next" href="#contraintes">Voir ce que ce nombre représente sur l’année ↓</a></div></div></div></section>
+<section class="section soft" id="calculateur"><div class="narrow"><div class="section-title"><h2><span class="number">1.</span>Calculez votre nombre de bouteilles</h2><p>Choisissez votre mode d’achat puis renseignez vos habitudes actuelles.</p></div><div class="calc-card"><div class="panel"><div class="panel-title">Votre utilisation actuelle</div><div class="mode"><button class="active" data-mode="packs" type="button">Packs de bouteilles</button><button data-mode="five" type="button">Bouteilles de 5 L</button></div><div class="fields" id="packFields">
+
+  <div class="field">
+    <label for="packsWeek">Packs utilisés par semaine</label>
+    <div class="control">
+      <input id="packsWeek" min="0" step="0.5" type="number" value="3"/>
+      <span class="unit">packs</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="packPrice">
+      Prix moyen d’un pack
+      <span style="font-weight:500;color:#4B5F67">(indicatif)</span>
+    </label>
+    <div class="control">
+      <input id="packPrice" inputmode="decimal" value="4,50"/>
+      <span class="unit">€</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="bottlesPack">
+      Bouteilles dans un pack
+      <span style="font-weight:500;color:#4B5F67">(optionnel)</span>
+    </label>
+    <div class="control">
+      <input id="bottlesPack" min="1" step="1" type="number" value="6"/>
+      <span class="unit">bouteilles</span>
+    </div>
+  </div>
+
+</div><div class="fields hidden" id="fiveFields">
+
+  <div class="field">
+    <label for="fiveWeek">Bouteilles de 5 L utilisées par semaine</label>
+    <div class="control">
+      <input id="fiveWeek" min="0" step="0.5" type="number" value="4"/>
+      <span class="unit">bouteilles</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="fivePrice">
+      Prix moyen d’une bouteille de 5 L
+      <span style="font-weight:500;color:#4B5F67">(indicatif)</span>
+    </label>
+    <div class="control">
+      <input id="fivePrice" inputmode="decimal" value="2,50"/>
+      <span class="unit">€</span>
+    </div>
+  </div>
+
+</div><button class="btn btn-primary calc-btn" id="calcBtn" type="button">Voir mon estimation</button></div><div class="arrow">→</div><div aria-live="polite" class="panel result" id="resultat-estimation"><div class="panel-title" style="text-align:center">Votre utilisation estimée</div><div class="numbers"><div><strong id="monthly">78</strong><span>bouteilles / mois</span></div><div class="sep"></div><div><strong id="yearly">936</strong><span>bouteilles / an</span></div></div><div class="secondary-result" id="count">Soit environ <strong>936 bouteilles</strong> utilisées sur une année</div><div class="secondary-result hidden" id="volume"></div><p class="note"><strong>Vous avez maintenant votre chiffre.</strong><br/>Si vos habitudes restent les mêmes, ce nombre se répète année après année. Si vous souhaitez utiliser moins de bouteilles, une solution de filtration peut être étudiée selon votre foyer et vos usages.</p><a class="small-cta" data-track="calculator_next" href="#contraintes">Voir ce que ce nombre représente sur l’année ↓</a></div></div></div></section>
 <section class="section surface" id="contraintes"><div class="narrow"><div class="section-title"><h2><span class="number">2.</span>Ce nombre de bouteilles s’accumule dans le temps</h2></div><div class="routine">
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 4h2l2 11h10l3-8H6"></path><circle cx="9" cy="19" r="1.4"></circle><circle cx="17" cy="19" r="1.4"></circle></svg></span><h3>Chaque semaine</h3><p>Quelques bouteilles peuvent sembler peu lorsqu’on les regarde séparément.</p></article>
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M8 21v-7l2-3 1-5 3 1-1 4 3 2 2 7"></path><circle cx="12" cy="3.5" r="2"></circle><path d="M5 12h4"></path></svg></span><h3>Chaque mois</h3><p>Additionnées, elles représentent déjà un volume régulier pour le foyer.</p></article>
