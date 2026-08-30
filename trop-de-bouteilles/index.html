@@ -716,14 +716,38 @@ const form=q('#leadForm');
 const submitBtn=form.querySelector('button[type="submit"]');
 const sink=q('#crm_sink');
 
-sink.addEventListener('load',()=>{
+window.addEventListener('message',event=>{
+
+  if(event.source!==sink.contentWindow)return;
+
+  const data=event.data;
+
+  if(!data || data.source!=='aquarun_crm')return;
   if(!crmSubmitted)return;
+
   crmSubmitted=false;
-  q('#step2').classList.add('hidden');
-  q('#success').classList.remove('hidden');
+
   submitBtn.disabled=false;
   submitBtn.textContent='Recevoir mon conseil personnalisé';
-  window.dataLayer.push({event:'lead_form_submit'});
+
+  if(data.success===true){
+
+    q('#step2').classList.add('hidden');
+    q('#success').classList.remove('hidden');
+
+    if(!data.duplicate){
+      window.dataLayer.push({
+        event:'lead_form_submit'
+      });
+    }
+
+    return;
+  }
+
+  alert(
+    'La demande n’a pas pu être enregistrée. Merci de réessayer ou de me contacter directement.'
+  );
+
 });
 
 form.addEventListener('submit',e=>{
