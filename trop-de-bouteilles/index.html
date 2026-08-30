@@ -346,6 +346,79 @@ h1 em{font-style:normal;color:var(--primary)}
 }
 
 </style>
+  <style id="bouteilles-contact-direct-final">
+
+#conseil .direct-contact-panel{
+  margin-top:20px;
+  padding:16px;
+  border:1px solid #DCE9ED;
+  border-radius:12px;
+  background:linear-gradient(180deg,#FFFFFF,#F7FBFC);
+}
+
+#conseil .direct-contact-panel__title{
+  margin:0 0 4px;
+  color:#102A36;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.35;
+}
+
+#conseil .direct-contact-panel__text{
+  margin:0 0 12px;
+  color:#4B5F67;
+  font-size:12.5px;
+  line-height:1.45;
+}
+
+#conseil .direct-contact-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+}
+
+#conseil .direct-contact-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:780;
+}
+
+#conseil .direct-contact-btn-phone{
+  background:#0DBDDB;
+  border:1px solid #0DBDDB;
+  color:#102A36;
+}
+
+#conseil .direct-contact-btn-whatsapp{
+  background:#25D366;
+  border:1px solid #25D366;
+  color:#102A36;
+}
+
+@media(max-width:620px){
+
+  #conseil .direct-contact-actions{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+    gap:10px !important;
+  }
+
+  #conseil .direct-contact-btn{
+    width:100% !important;
+    min-height:46px;
+    padding:10px 8px;
+    font-size:12px;
+  }
+
+}
+
+</style>
 </head>
 <body>
 <header class="header">
@@ -404,7 +477,65 @@ h1 em{font-style:normal;color:var(--primary)}
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M7 7h10M9 7V4h6v3M9 10v7M15 10v7M6 7l1 13h10l1-13"></path></svg></span><h3>Puis ça recommence</h3><p>Si vos habitudes restent identiques, le même cycle repart l’année suivante.</p></article>
 </div></div></section>
 <section class="section soft" id="solution"><div class="wrap"><div class="solution-card"><div><img alt="Eau qui coule du robinet dans un verre" src="../assets/photo-robinet.png"/></div><div class="solution-copy"><h2><span class="number">3.</span>Et si vous utilisiez moins de bouteilles au quotidien ?</h2><p>Selon vos besoins et vos habitudes, une solution de filtration adaptée peut permettre de disposer d’une eau filtrée directement à la maison et de réduire progressivement l’utilisation des bouteilles au quotidien.</p><div class="benefits"><div class="benefit"><span class="check">✓</span><div><strong>Moins de bouteilles utilisées</strong><p>Réduire progressivement le recours aux bouteilles pour l’eau consommée à la maison.</p></div></div><div class="benefit"><span class="check">✓</span><div><strong>Moins de plastique lié aux bouteilles</strong><p>Réduire la quantité de plastique associée à cette consommation au fil du temps.</p></div></div><div class="benefit"><span class="check">✓</span><div><strong>Une solution adaptée à votre foyer</strong><p>Le choix de la filtration dépend de vos besoins, de votre logement et de vos usages.</p></div></div></div><a class="btn btn-outline" data-track="solution_advisor" href="#conseil">Voir quelle filtration pourrait me convenir ↓</a></div></div></div></section>
-<section class="section surface" id="conseil"><div class="wrap advisor"><div class="advisor-main"><h2><span class="number">4.</span>La bonne solution dépend de votre foyer</h2><p>Réduire les bouteilles ne signifie pas choisir une technologie au hasard. L’objectif est d’abord de comprendre vos habitudes, votre logement et ce que vous attendez réellement de votre eau avant de vous orienter vers une solution adaptée.</p><div class="proofs"><div class="proof"><strong>Depuis 20 ans</strong><span>AquaRun à la Réunion</span></div><div class="proof"><strong>+15 000</strong><span>foyers équipés par AquaRun</span></div><div class="proof"><strong>+7 ans</strong><span>Marc conseiller aux côtés d’AquaRun</span></div><div class="proof"><strong>Plusieurs solutions</strong><span>Filtres et filtrations adaptés à vos besoins et à votre budget.</span></div></div></div><div class="photo-card"><div class="photo-slot"><div><strong>Votre photo ici</strong>Remplacez simplement l’image prévue par votre vraie photo de Marc.</div></div><div class="photo-text"><p><strong>Je suis Marc,</strong><br><span class="blue"><strong>Conseiller AquaRun à La Réunion.</strong></span></br></p><p>J’accompagne chaque foyer pour comprendre ses besoins et l’orienter vers une solution adaptée, avec un conseil personnalisé, une installation maîtrisée et un suivi de proximité.</p></div></div></div></section>
+<section class="section surface" id="conseil"><div class="wrap advisor"><div class="advisor-main"><h2><span class="number">4.</span>La bonne solution dépend de votre foyer</h2><p>Réduire les bouteilles ne signifie pas choisir une technologie au hasard. L’objectif est d’abord de comprendre vos habitudes, votre logement et ce que vous attendez réellement de votre eau avant de vous orienter vers une solution adaptée.</p><div class="proofs"><div class="proof"><strong>Depuis 20 ans</strong><span>AquaRun à la Réunion</span></div><div class="proof"><strong>+15 000</strong><span>foyers équipés par AquaRun</span></div><div class="proof"><strong>+7 ans</strong><span>Marc conseiller aux côtés d’AquaRun</span></div><div class="proof"><strong>Plusieurs solutions</strong><span>Filtres et filtrations adaptés à vos besoins et à votre budget.</span></div></div></div><div class="photo-card">
+
+  <div class="photo-slot">
+    <div>
+      <strong>Votre photo ici</strong>
+      Remplacez simplement l’image prévue par votre vraie photo de Marc.
+    </div>
+  </div>
+
+  <div class="photo-text">
+
+    <p>
+      <strong>Je suis Marc,</strong><br/>
+      <span class="blue">
+        <strong>Conseiller AquaRun à La Réunion.</strong>
+      </span>
+    </p>
+
+    <p>
+      J’accompagne chaque foyer pour comprendre ses besoins et l’orienter vers une solution adaptée, avec un conseil personnalisé, une installation maîtrisée et un suivi de proximité.
+    </p>
+
+    <div class="direct-contact-panel">
+
+      <p class="direct-contact-panel__title">
+        Vous préférez échanger directement avec moi ?
+      </p>
+
+      <p class="direct-contact-panel__text">
+        Un appel ou un message suffit pour poser vos questions.
+      </p>
+
+      <div class="direct-contact-actions">
+
+        <a
+          class="direct-contact-btn direct-contact-btn-whatsapp"
+          href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20viens%20de%20calculer%20le%20nombre%20de%20bouteilles%20utilis%C3%A9es%20par%20mon%20foyer%20et%20je%20souhaite%20savoir%20quelle%20solution%20de%20filtration%20pourrait%20m%E2%80%99aider%20%C3%A0%20en%20utiliser%20moins.%20Pouvons-nous%20en%20discuter%20%3F"
+          target="_blank"
+          rel="noopener"
+          data-direct-contact="whatsapp"
+        >
+          Écrire sur WhatsApp
+        </a>
+
+        <a
+          class="direct-contact-btn direct-contact-btn-phone"
+          href="tel:+262693415391"
+          data-direct-contact="phone"
+        >
+          Appeler Marc
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div></div></section>
 <section class="section soft" id="formulaire"><div class="narrow"><div class="section-title"><h2><span class="number">5.</span>Quelle solution serait adaptée à votre foyer ?</h2><p>Quelques réponses suffisent pour préparer un conseil plus pertinent.</p></div><form action="https://script.google.com/macros/s/AKfycbzNAwXho382vhEBPrOIVzdPO7IPKxFPXIdyvPSbeU5fZM6YI1hoeApf0eESioTwotgJ/exec" class="form-card" id="leadForm" method="post" novalidate="" target="crm_sink">
 <input aria-hidden="true" autocomplete="off" class="hp-field" name="website" tabindex="-1" type="text"/>
 <input id="crm_mode" name="mode" type="hidden" value="packs"/>
