@@ -812,7 +812,6 @@ function syncCrmFields(){
   q('#crm_bottles_annual').value=Math.round(calcState.count);
   q('#crm_volume_annual').value=mode==='five'?Math.round(calcState.volume):'';
 }
-}
 
 function calculate(showFeedback=false){
 
@@ -893,7 +892,6 @@ function calculate(showFeedback=false){
     budget_monthly:Number(calcState.budgetMonthly.toFixed(2)),
     budget_annual:Number(calcState.budgetAnnual.toFixed(2))
   });
-}
 }
 
 qa('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
