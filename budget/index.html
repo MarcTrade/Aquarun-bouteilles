@@ -823,7 +823,7 @@ h1 em{font-style:normal;color:var(--primary)}
   <div class="direct-contact-panel">
 
     <p class="direct-contact-panel__title">
-      Vous préférez échanger directement avec moi ?
+    Vous préférez échanger directement avec moi ?
     </p>
 
     <p class="direct-contact-panel__text">
@@ -1148,9 +1148,17 @@ q('#crm_utm_content').value=params.get('utm_content')||defaultUtmContent;
 function groupValid(name){return !!document.querySelector(`input[name="${name}"]:checked`)}
 q('#nextBtn').addEventListener('click',()=>{
   if(!['household','housing','timing'].every(groupValid)){alert('Merci de répondre aux trois questions pour continuer.');return}
+  q('#conseil .direct-contact-panel')?.classList.add('hidden');
   q('#step1').classList.add('hidden');q('#step2').classList.remove('hidden');q('#prog1').classList.remove('on');q('#prog2').classList.add('on');q('#formulaire').scrollIntoView({behavior:'smooth'});window.dataLayer.push({event:'form_step_1_complete'});
 });
-q('#backBtn').addEventListener('click',()=>{q('#step2').classList.add('hidden');q('#step1').classList.remove('hidden');q('#prog2').classList.remove('on');q('#prog1').classList.add('on')});
+
+  q('#backBtn').addEventListener('click',()=>{
+  q('#step2').classList.add('hidden');
+  q('#step1').classList.remove('hidden');
+  q('#prog2').classList.remove('on');
+  q('#prog1').classList.add('on');
+  q('#conseil .direct-contact-panel')?.classList.remove('hidden');
+});
 
 const form=q('#leadForm');
 const submitBtn=form.querySelector('button[type="submit"]');
