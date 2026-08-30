@@ -629,6 +629,15 @@ qa('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
 ['#packsWeek','#bottlesPack','#fiveWeek'].forEach(sel=>q(sel).addEventListener('input',()=>calculate(false)));
 q('#calcBtn').addEventListener('click',()=>calculate(true));
 qa('[data-track]').forEach(a=>a.addEventListener('click',()=>window.dataLayer.push({event:'cta_click',cta:a.dataset.track})));
+  qa('[data-direct-contact]').forEach(a=>a.addEventListener('click',()=>{
+  const type=a.dataset.directContact;
+
+  window.dataLayer.push({
+    event:type==='whatsapp'?'click_whatsapp':'click_phone',
+    landing:'bouteilles',
+    angle:'Réduction bouteilles'
+  });
+}));
 
 // Attribution invisible de la publicité vers le CRM.
 const params=new URLSearchParams(window.location.search);
