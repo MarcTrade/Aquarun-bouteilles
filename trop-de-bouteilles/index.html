@@ -1102,17 +1102,37 @@ window.addEventListener('message',event=>{
 
   if(data.success===true){
 
-    q('#step2').classList.add('hidden');
-    q('#success').classList.remove('hidden');
+  q('#step2').classList.add('hidden');
 
-    if(!data.duplicate){
-      window.dataLayer.push({
-        event:'lead_form_submit'
-      });
-    }
+  const successBlock=q('#success');
+  successBlock.classList.remove('hidden');
 
-    return;
+  const successContact=successBlock.querySelector('.direct-contact-panel');
+  const successActions=successBlock.querySelector('.direct-contact-actions');
+
+  if(successContact){
+    successContact.classList.remove('hidden');
+    successContact.style.display='block';
   }
+
+  if(successActions){
+    successActions.classList.remove('hidden');
+    successActions.style.display='flex';
+  }
+
+  successBlock.scrollIntoView({
+    behavior:'smooth',
+    block:'center'
+  });
+
+  if(!data.duplicate){
+    window.dataLayer.push({
+      event:'lead_form_submit'
+    });
+  }
+
+  return;
+}
 
   alert(
     'La demande n’a pas pu être enregistrée. Merci de réessayer ou de me contacter directement.'
