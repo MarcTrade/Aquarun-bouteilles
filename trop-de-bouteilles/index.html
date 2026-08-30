@@ -1167,7 +1167,18 @@ qa('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
   q('#packFields').classList.toggle('hidden',mode!=='packs'); q('#fiveFields').classList.toggle('hidden',mode!=='five'); calculate(true);
 }));
 ['#packsWeek','#bottlesPack','#packPrice','#fiveWeek','#fivePrice'].forEach(sel=>q(sel).addEventListener('input',()=>calculate(false)));
-q('#calcBtn').addEventListener('click',()=>calculate(true));
+q('#calcBtn').addEventListener('click',()=>{
+
+  calculate(true);
+
+  setTimeout(()=>{
+    q('#resultat-estimation').scrollIntoView({
+      behavior:'smooth',
+      block:'start'
+    });
+  },100);
+
+});
 qa('[data-track]').forEach(a=>a.addEventListener('click',()=>window.dataLayer.push({event:'cta_click',cta:a.dataset.track})));
   qa('[data-direct-contact]').forEach(a=>a.addEventListener('click',()=>{
   const type=a.dataset.directContact;
