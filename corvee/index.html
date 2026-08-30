@@ -1,3 +1,4 @@
+```
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -5,7 +6,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Calculez votre consommation de bouteilles | AquaRun</title>
-<meta content="Estimez votre budget actuel en bouteilles d'eau et découvrez une solution de filtration adaptée à votre foyer à La Réunion." name="description"/>
+<meta content="Estimez votre consommation actuelle de bouteilles d'eau et découvrez une solution de filtration adaptée à votre foyer à La Réunion." name="description"/>
 <style>
 :root{--primary:#007C9E;--secondary:#102A36;--accent:#0DBDDB;--bg:#F7FBFC;--text:#131618;--muted:#4B5F67;--line:#DCE9ED;--card:#fff;--soft:#EEF8FA;--radius:8px;--shadow:0 18px 50px rgba(16,42,54,.08)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.55}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}img{display:block;max-width:100%}a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.narrow{width:min(1040px,calc(100% - 40px));margin:auto}.section{padding:80px 0}.surface{background:#fff}.soft{background:linear-gradient(180deg,#F7FBFC,#EEF8FA)}
@@ -541,161 +542,149 @@ h1 em{font-style:normal;color:var(--primary)}
   }
 }
 </style>
-  <style id="corvee-solution-mobile-final">
+
+<style id="corvee-responsive-harmony-v5">
+/* Correctif ciblé : point 3 + sécurisation mobile du point 4.
+   Desktop inchangé ; tablette et mobile restent fluides. */
+#solution .solution-copy,
+#solution .benefit > div,
+#conseil .advisor-main,
+#conseil .photo-card,
+#conseil .photo-text{
+  min-width:0;
+}
+
+@media(max-width:900px){
+  #solution .solution-card{
+    width:100%;
+    min-width:0;
+  }
+}
+
 @media(max-width:620px){
-
-  /* =========================
-     POINT 3 CORVÉE — MOBILE
-     ========================= */
-
+  /* POINT 3 : même construction visuelle que la référence mobile validée */
   #solution{
-    padding:0 !important;
-    background:#EEF8FA !important;
+    overflow:hidden;
+    padding:28px 0 !important;
   }
 
   #solution .wrap{
-    width:calc(100% - 28px) !important;
+    width:calc(100% - 24px) !important;
+    max-width:100% !important;
     margin:0 auto !important;
   }
 
-  /* Une seule grande zone blanche */
   #solution .solution-card{
     display:block !important;
-    background:#fff !important;
-    border:1px solid #DCE9ED !important;
-    border-radius:0 !important;
-    box-shadow:none !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
     overflow:hidden !important;
+    border-radius:12px !important;
   }
 
-  /* Pas de photo sur mobile */
+  /* Sur mobile, on privilégie le contenu : pas de photo au point 3 */
   #solution .solution-card > div:first-child{
     display:none !important;
   }
 
   #solution .solution-copy{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
     padding:28px 20px 24px !important;
   }
 
-  /* Titre */
   #solution .solution-copy h2{
-    margin:0 0 22px !important;
-    font-size:clamp(31px,8vw,40px) !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 0 20px !important;
+    font-size:clamp(30px,8vw,38px) !important;
     line-height:1.08 !important;
     letter-spacing:-.035em !important;
-    color:#102A36 !important;
     text-align:left !important;
+    overflow-wrap:anywhere;
   }
 
   #solution .solution-copy h2 .number{
     font-size:inherit !important;
-    color:#0DBDDB !important;
-    margin-right:7px !important;
   }
 
-  /* Texte d'introduction */
   #solution .solution-copy > p{
+    width:100% !important;
+    max-width:100% !important;
     margin:0 0 30px !important;
     font-size:18px !important;
     line-height:1.55 !important;
-    color:#4B5F67 !important;
     text-align:left !important;
+    overflow-wrap:anywhere;
   }
 
-  /* Liste des 3 avantages */
   #solution .benefits{
     display:grid !important;
     grid-template-columns:1fr !important;
+    width:100% !important;
     gap:28px !important;
-    margin:0 0 34px !important;
+    margin:0 0 32px !important;
   }
 
   #solution .benefit{
     display:grid !important;
     grid-template-columns:48px minmax(0,1fr) !important;
+    width:100% !important;
+    min-width:0 !important;
     gap:16px !important;
     align-items:start !important;
-    margin:0 !important;
   }
 
-  /* Cercle avec coche */
   #solution .check{
     width:44px !important;
     height:44px !important;
-    border-radius:50% !important;
-    display:grid !important;
-    place-items:center !important;
-    background:#EAF7FA !important;
-    color:#007C9E !important;
     font-size:23px !important;
-    font-weight:800 !important;
+    flex:0 0 auto;
   }
 
-  /* Titres bénéfices */
   #solution .benefit strong{
     display:block !important;
     margin:0 0 5px !important;
-    color:#102A36 !important;
     font-size:18px !important;
     line-height:1.3 !important;
-    font-weight:800 !important;
+    overflow-wrap:anywhere;
   }
 
-  /* Explications bénéfices */
   #solution .benefit p{
     margin:0 !important;
-    color:#4B5F67 !important;
     font-size:16px !important;
     line-height:1.5 !important;
+    overflow-wrap:anywhere;
   }
 
-  /* CTA */
   #solution .btn-outline{
+    display:flex !important;
     width:100% !important;
+    max-width:100% !important;
     min-height:76px !important;
     padding:16px 18px !important;
-    border:1px solid #8ECBD7 !important;
-    border-radius:10px !important;
-    background:#fff !important;
-    color:#007C9E !important;
     font-size:18px !important;
     line-height:1.35 !important;
-    font-weight:800 !important;
     text-align:left !important;
     justify-content:flex-start !important;
+    white-space:normal !important;
   }
-}
-</style>
-  <style id="conseil-mobile-restore-final">
 
-@media(max-width:620px){
-
-  /* POINT 4 : retour au comportement mobile correct */
-
+  /* POINT 4 : restitution de la version mobile validée */
   #conseil .advisor{
-    display:grid !important;
     grid-template-columns:1fr !important;
-    width:100% !important;
-    gap:24px !important;
-  }
-
-  #conseil .advisor-main{
     width:100% !important;
     min-width:0 !important;
   }
 
   #conseil .photo-card{
-    display:grid !important;
     grid-template-columns:1fr !important;
     width:100% !important;
     min-width:0 !important;
     gap:24px !important;
     padding:20px !important;
-  }
-
-  #conseil .photo-slot{
-    width:100% !important;
-    height:300px !important;
   }
 
   #conseil .photo-text{
@@ -708,26 +697,16 @@ h1 em{font-style:normal;color:var(--primary)}
     display:block !important;
     width:100% !important;
     max-width:100% !important;
-    margin-bottom:20px !important;
   }
 
   #conseil .direct-contact-panel{
-    display:block !important;
-    width:100% !important;
-    max-width:100% !important;
-    padding:16px !important;
-  }
-
-  #conseil .direct-contact-panel__title,
-  #conseil .direct-contact-panel__text{
-    display:block !important;
     width:100% !important;
     max-width:100% !important;
   }
 
   #conseil .direct-contact-actions{
     display:grid !important;
-    grid-template-columns:1fr 1fr !important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
     gap:10px !important;
     width:100% !important;
   }
@@ -735,11 +714,24 @@ h1 em{font-style:normal;color:var(--primary)}
   #conseil .direct-contact-btn{
     width:100% !important;
     min-width:0 !important;
+    white-space:normal !important;
   }
-
 }
 
+@media(max-width:380px){
+  #solution .solution-copy{padding:24px 16px 22px !important;}
+  #solution .solution-copy h2{font-size:28px !important;}
+  #solution .solution-copy > p{font-size:16px !important;}
+  #solution .benefit{grid-template-columns:42px minmax(0,1fr) !important;gap:12px !important;}
+  #solution .check{width:40px !important;height:40px !important;font-size:21px !important;}
+  #solution .benefit strong{font-size:17px !important;}
+  #solution .benefit p{font-size:15px !important;}
+  #solution .btn-outline{font-size:16px !important;}
+  #conseil .direct-contact-actions{gap:8px !important;}
+  #conseil .direct-contact-btn{font-size:11.5px !important;padding:9px 5px !important;}
+}
 </style>
+
 </head>
 <body>
 <header class="header">
@@ -779,7 +771,7 @@ h1 em{font-style:normal;color:var(--primary)}
     <span class="kicker">Moins de packs à gérer</span>
     <h1>Combien de packs d’eau gérez-vous <em>chaque mois</em>&nbsp;?</h1>
     <p class="lead">Courses, coffre, maison… puis quelques jours plus tard, il faut recommencer.</p>
-    <p class="lead-strong">A La Réunion, acheter, transporter et stocker des packs d’eau peut vite devenir une vraie corvée au quotidien.</p>
+    <p class="lead-strong">À La Réunion, acheter, transporter et stocker des packs d’eau peut vite devenir une vraie corvée au quotidien.</p>
     <a class="btn btn-primary" data-track="hero_calculator" href="#calculateur">Calculer ma consommation <span>↓</span></a>
     <div class="hero-proof">
       <span><i class="dot"></i>Conseil personnalisé</span>
@@ -805,419 +797,14 @@ h1 em{font-style:normal;color:var(--primary)}
 </div></div></div><div class="secondary-result" id="count">Soit environ <strong>936 bouteilles</strong> achetées par an</div><div class="secondary-result hidden" id="volume"></div><p class="note">
   <strong>Vous visualisez maintenant ce que représentent vos achats.</strong><br>
   Packs à acheter, transporter, rentrer et stocker : répétés toute l’année, ces gestes finissent par faire partie du quotidien.
-</p><a class="small-cta" data-track="calculator_next" href="#contraintes">Voir ce que cela représente au quotidien ↓a></div></div></div></section>
+</p><a class="small-cta" data-track="calculator_next" href="#contraintes">Voir ce que cela représente au quotidien ↓</a></div></div></div></section>
 <section class="section surface" id="contraintes"><div class="narrow"><div class="section-title"><h2><span class="number">2.</span>Ce n’est pas seulement une question de budget</h2></div><div class="routine">
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 4h2l2 11h10l3-8H6"></path><circle cx="9" cy="19" r="1.4"></circle><circle cx="17" cy="19" r="1.4"></circle></svg></span><h3>Acheter</h3><p>Penser aux bouteilles lors des courses.</p></article>
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M8 21v-7l2-3 1-5 3 1-1 4 3 2 2 7"></path><circle cx="12" cy="3.5" r="2"></circle><path d="M5 12h4"></path></svg></span><h3>Porter</h3><p>Du chariot au coffre, puis jusqu’à la maison.</p></article>
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><rect height="16" rx="1" width="16" x="4" y="4"></rect><path d="M4 10h16M10 4v16"></path></svg></span><h3>Stocker</h3><p>Trouver de la place en permanence.</p></article>
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M7 7h10M9 7V4h6v3M9 10v7M15 10v7M6 7l1 13h10l1-13"></path></svg></span><h3>Trier / recycler</h3><p>Gérer les bouteilles une fois vides.</p></article>
 </div></div></section>
-<style id="corvee3-responsive-final">
-
-/* ========================================
-   POINT 3 CORVÉE — RESPONSIVE FINAL
-   ======================================== */
-
-#solution{
-  overflow:hidden;
-}
-
-#solution *,
-#solution *::before,
-#solution *::after{
-  box-sizing:border-box;
-}
-
-.corvee3{
-  width:100%;
-  max-width:1060px;
-  min-width:0;
-  margin:0 auto;
-
-  padding:clamp(30px,4.5vw,54px);
-
-  background:#FFFFFF;
-  border:1px solid #DCE9ED;
-  border-radius:16px;
-
-  box-shadow:0 12px 36px rgba(16,42,54,.05);
-
-  overflow:hidden;
-}
-
-
-/* ---------- TITRE + INTRO ---------- */
-
-.corvee3-head{
-  width:100%;
-  max-width:900px;
-  min-width:0;
-  margin:0 0 38px;
-}
-
-.corvee3-head h2{
-  width:100%;
-  max-width:850px;
-  margin:0 0 18px;
-
-  color:#102A36;
-
-  font-size:clamp(32px,4vw,46px);
-  line-height:1.08;
-  letter-spacing:-.035em;
-
-  text-align:left;
-}
-
-.corvee3-head .number{
-  color:#0DBDDB;
-  font-size:inherit;
-  font-weight:900;
-  margin-right:8px;
-}
-
-.corvee3-head p{
-  width:100%;
-  max-width:850px;
-  min-width:0;
-
-  margin:0;
-
-  color:#4B5F67;
-
-  font-size:clamp(16px,1.6vw,19px);
-  line-height:1.6;
-
-  text-align:left;
-
-  overflow-wrap:break-word;
-}
-
-
-/* ---------- BÉNÉFICES ---------- */
-
-.corvee3-benefits{
-  width:100%;
-  min-width:0;
-
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-
-  gap:28px;
-
-  margin:0 0 38px;
-}
-
-.corvee3-benefit{
-  min-width:0;
-
-  display:grid;
-  grid-template-columns:48px minmax(0,1fr);
-
-  gap:15px;
-  align-items:start;
-}
-
-.corvee3-check{
-  width:46px;
-  height:46px;
-
-  flex:none;
-
-  display:grid;
-  place-items:center;
-
-  border-radius:50%;
-
-  background:#EAF7FA;
-  color:#007C9E;
-
-  font-size:24px;
-  font-weight:850;
-  line-height:1;
-}
-
-.corvee3-benefit > div{
-  min-width:0;
-}
-
-.corvee3-benefit strong{
-  display:block;
-
-  margin:2px 0 6px;
-
-  color:#102A36;
-
-  font-size:18px;
-  line-height:1.3;
-  font-weight:800;
-
-  overflow-wrap:break-word;
-}
-
-.corvee3-benefit p{
-  margin:0;
-
-  color:#4B5F67;
-
-  font-size:15px;
-  line-height:1.5;
-
-  overflow-wrap:break-word;
-}
-
-
-/* ---------- CTA ---------- */
-
-.corvee3-cta{
-  width:100%;
-  max-width:620px;
-  min-width:0;
-
-  min-height:70px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  gap:14px;
-
-  padding:16px 20px;
-
-  background:#FFFFFF;
-
-  border:1px solid #8ECBD7;
-  border-radius:10px;
-
-  color:#007C9E;
-
-  text-decoration:none;
-
-  font-size:18px;
-  line-height:1.35;
-  font-weight:800;
-
-  overflow-wrap:break-word;
-}
-
-.corvee3-cta span{
-  flex:none;
-}
-
-
-/* ========================================
-   TABLETTE
-   ======================================== */
-
-@media(max-width:900px){
-
-  .corvee3-benefits{
-    grid-template-columns:1fr;
-    gap:25px;
-  }
-
-  .corvee3-benefit{
-    max-width:650px;
-  }
-
-}
-
-
-/* ========================================
-   MOBILE
-   ======================================== */
-
-@media(max-width:620px){
-
-  #solution{
-    padding:28px 0 !important;
-  }
-
-  #solution .wrap{
-    width:calc(100% - 24px) !important;
-    max-width:100% !important;
-    margin:0 auto !important;
-  }
-
-  .corvee3{
-    width:100%;
-    max-width:100%;
-
-    padding:26px 20px 24px;
-
-    border-radius:12px;
-  }
-
-  .corvee3-head{
-    margin-bottom:30px;
-  }
-
-  .corvee3-head h2{
-    width:100%;
-    max-width:100%;
-
-    margin-bottom:18px;
-
-    font-size:clamp(29px,8.2vw,36px);
-    line-height:1.08;
-  }
-
-  .corvee3-head p{
-    width:100%;
-    max-width:100%;
-
-    font-size:17px;
-    line-height:1.55;
-  }
-
-  .corvee3-benefits{
-    width:100%;
-
-    grid-template-columns:1fr;
-
-    gap:28px;
-
-    margin-bottom:32px;
-  }
-
-  .corvee3-benefit{
-    width:100%;
-    max-width:100%;
-    min-width:0;
-
-    grid-template-columns:46px minmax(0,1fr);
-
-    gap:15px;
-  }
-
-  .corvee3-check{
-    width:44px;
-    height:44px;
-
-    font-size:23px;
-  }
-
-  .corvee3-benefit strong{
-    font-size:18px;
-    line-height:1.3;
-  }
-
-  .corvee3-benefit p{
-    font-size:16px;
-    line-height:1.5;
-  }
-
-  .corvee3-cta{
-    width:100%;
-    max-width:100%;
-
-    min-height:74px;
-
-    padding:15px 17px;
-
-    font-size:17px;
-    line-height:1.35;
-  }
-
-}
-
-
-/* Très petits téléphones */
-
-@media(max-width:380px){
-
-  .corvee3{
-    padding:23px 16px 21px;
-  }
-
-  .corvee3-head h2{
-    font-size:28px;
-  }
-
-  .corvee3-head p{
-    font-size:16px;
-  }
-
-  .corvee3-benefit{
-    grid-template-columns:42px minmax(0,1fr);
-    gap:12px;
-  }
-
-  .corvee3-check{
-    width:40px;
-    height:40px;
-    font-size:21px;
-  }
-
-  .corvee3-benefit strong{
-    font-size:17px;
-  }
-
-  .corvee3-benefit p{
-    font-size:15px;
-  }
-
-  .corvee3-cta{
-    font-size:16px;
-  }
-
-}
-
-</style>
-  <section class="section soft" id="solution">
-  <div class="wrap">
-    <div class="corvee3">
-
-      <div class="corvee3-head">
-        <h2>
-          <span class="number">3.</span>
-          Et si vous aviez moins de bouteilles à gérer ?
-        </h2>
-
-        <p>
-          Selon vos besoins et vos habitudes, une solution de filtration adaptée
-          peut permettre de disposer d’une eau filtrée directement à la maison
-          et de réduire l’utilisation des bouteilles au quotidien.
-        </p>
-      </div>
-
-      <div class="corvee3-benefits">
-
-        <div class="corvee3-benefit">
-          <span class="corvee3-check">✓</span>
-          <div>
-            <strong>Moins de packs et de bouteilles</strong>
-            <p>Réduire la fréquence des achats à gérer.</p>
-          </div>
-        </div>
-
-        <div class="corvee3-benefit">
-          <span class="corvee3-check">✓</span>
-          <div>
-            <strong>Plus de simplicité</strong>
-            <p>Une eau filtrée disponible directement à la maison.</p>
-          </div>
-        </div>
-
-        <div class="corvee3-benefit">
-          <span class="corvee3-check">✓</span>
-          <div>
-            <strong>Moins de plastique</strong>
-            <p>Réduire progressivement le nombre de bouteilles utilisées par le foyer.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <a class="corvee3-cta"
-         data-track="solution_advisor"
-         href="#conseil">
-        Comprendre quelle solution me conviendrait <span>↓</span>
-      </a>
-
-    </div>
-  </div>
-</section>
+<section class="section soft" id="solution"><div class="wrap"><div class="solution-card"><div><img alt="Eau qui coule du robinet dans un verre" src="../assets/photo-robinet.png"/></div><div class="solution-copy"><h2><span class="number">3.</span>Et si vous aviez moins de bouteilles à gérer ?</h2><p>Selon vos besoins et vos habitudes, une solution de filtration adaptée peut permettre de disposer d’une eau filtrée directement à la maison et de réduire l’utilisation des bouteilles au quotidien.</p><div class="benefits"><div class="benefit"><span class="check">✓</span><div><strong>Moins de packs et de bouteilles</strong><p>Réduire la fréquence des achats à gérer.</p></div></div><div class="benefit"><span class="check">✓</span><div><strong>Plus de simplicité</strong><p>Une eau filtrée disponible directement à la maison.</p></div></div><div class="benefit"><span class="check">✓</span><div><strong>Moins de plastique</strong><p>Réduire progressivement le nombre de bouteilles utilisées par le foyer.</p></div></div></div><a class="btn btn-outline" data-track="solution_advisor" href="#conseil">Comprendre quelle solution me conviendrait ↓</a></div></div></div></section>
 <section class="section surface" id="conseil">
   <div class="wrap advisor">
 
@@ -1610,3 +1197,4 @@ form.addEventListener('submit',e=>{
 calculate(false);
 </script>
 </body></html>
+```
