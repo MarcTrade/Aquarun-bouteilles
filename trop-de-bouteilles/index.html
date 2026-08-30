@@ -482,6 +482,80 @@ h1 em{font-style:normal;color:var(--primary)}
 }
 
 </style>
+  <style id="success-direct-contact">
+
+#success .direct-contact-panel{
+  margin-top:20px;
+  padding:16px;
+  border:1px solid #DCE9ED;
+  border-radius:12px;
+  background:linear-gradient(180deg,#FFFFFF,#F7FBFC);
+}
+
+#success .direct-contact-panel__title{
+  margin:0 0 4px;
+  color:#102A36;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.35;
+}
+
+#success .direct-contact-panel__text{
+  margin:0 0 12px;
+  color:#4B5F67;
+  font-size:12.5px;
+  line-height:1.45;
+}
+
+#success .direct-contact-actions{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:9px;
+}
+
+#success .direct-contact-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:780;
+}
+
+#success .direct-contact-btn-phone{
+  background:#0DBDDB;
+  border:1px solid #0DBDDB;
+  color:#102A36;
+}
+
+#success .direct-contact-btn-whatsapp{
+  background:#25D366;
+  border:1px solid #25D366;
+  color:#102A36;
+}
+
+@media(max-width:620px){
+
+  #success .direct-contact-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  #success .direct-contact-btn{
+    width:100%;
+    min-height:46px;
+    padding:10px 8px;
+    font-size:12px;
+  }
+
+}
+
+</style>
 </head>
 <body>
 <header class="header">
@@ -768,7 +842,53 @@ h1 em{font-style:normal;color:var(--primary)}
     />
   </label>
 
-</div><div class="form-actions" style="justify-content:space-between;gap:12px"><button class="btn btn-outline" id="backBtn" type="button">Retour</button><button class="btn btn-primary" type="submit">Recevoir mon conseil personnalisé</button></div><p class="privacy">Vos informations servent uniquement à traiter votre demande et à vous recontacter.</p></div><div class="success hidden" id="success"><div class="success-badge">✓</div><h3>Merci, votre demande est enregistrée.</h3><p>Vos réponses permettront de mieux comprendre votre besoin avant la prise de contact.</p><p><strong>Marc — Conseiller AquaRun</strong></p></div></form></div></section>
+</div><div class="form-actions" style="justify-content:space-between;gap:12px"><button class="btn btn-outline" id="backBtn" type="button">Retour</button><button class="btn btn-primary" type="submit">Recevoir mon conseil personnalisé</button></div><p class="privacy">Vos informations servent uniquement à traiter votre demande et à vous recontacter.</p></div><div class="success hidden" id="success">
+
+  <div class="success-badge">✓</div>
+
+  <h3>Merci, votre demande est enregistrée.</h3>
+
+  <p>
+    Vos réponses permettront de mieux comprendre votre besoin avant la prise de contact.
+  </p>
+
+  <p><strong>Marc — Conseiller AquaRun</strong></p>
+
+  <div class="direct-contact-panel">
+
+    <p class="direct-contact-panel__title">
+      Vous souhaitez échanger maintenant ?
+    </p>
+
+    <p class="direct-contact-panel__text">
+      Vous pouvez m’écrire sur WhatsApp ou m’appeler directement.
+    </p>
+
+    <div class="direct-contact-actions">
+
+      <a
+        class="direct-contact-btn direct-contact-btn-whatsapp"
+        href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20viens%20de%20calculer%20le%20nombre%20de%20bouteilles%20utilis%C3%A9es%20par%20mon%20foyer%20et%20je%20souhaite%20savoir%20quelle%20solution%20de%20filtration%20pourrait%20m%E2%80%99aider%20%C3%A0%20en%20utiliser%20moins.%20Pouvons-nous%20en%20discuter%20%3F"
+        target="_blank"
+        rel="noopener"
+        data-direct-contact="whatsapp"
+      >
+        Écrire sur WhatsApp
+      </a>
+
+      <a
+        class="direct-contact-btn direct-contact-btn-phone"
+        href="tel:+262693415391"
+        data-direct-contact="phone"
+      >
+        Appeler Marc
+      </a>
+
+    </div>
+
+  </div>
+
+</div></form></div></section>
 </main>
 <iframe id="crm_sink" name="crm_sink" style="display:none" title="Transmission CRM"></iframe>
 <footer class="footer">
