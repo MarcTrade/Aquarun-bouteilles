@@ -806,12 +806,12 @@ qa('[data-track]').forEach(a=>a.addEventListener('click',()=>window.dataLayer.pu
 // Attribution invisible de la publicité vers le CRM.
 const params=new URLSearchParams(window.location.search);
 q('#crm_theme').value=params.get('theme')||'Bouteilles';
+q('#crm_angle').value=params.get('angle')||"Bouteilles d'eau";
 q('#crm_annonce').value=params.get('annonce')||"Trop de bouteilles - Bouteilles d'eau";
-q('#crm_annonce').value=params.get('annonce')||'Trop de bouteilles - Réduction bouteilles';
-q('#crm_landing').value=params.get('landing')||'Bouteilles - Réduction V1';
+q('#crm_landing').value=params.get('landing')||"Bouteilles d'eau - V1";
 q('#crm_utm_source').value=params.get('utm_source')||'';
 q('#crm_utm_campaign').value=params.get('utm_campaign')||'';
-q('#crm_utm_content').value=params.get('utm_content')||'bouteilles_reduction_v1';
+q('#crm_utm_content').value=params.get('utm_content')||'bouteilles_eau_v1';
 
 function groupValid(name){
   return !!document.querySelector(`input[name="${name}"]:checked`);
