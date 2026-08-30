@@ -208,6 +208,315 @@ h1 em{font-style:normal;color:var(--primary)}
   }
 }
 </style>
+ <style id="corvee-contact-final">
+
+/* Marc Jamin légèrement abaissé dans le header */
+.mini{
+  transform:translateY(3px);
+}
+
+/* Contact direct */
+.direct-contact-panel{
+  margin-top:20px;
+  padding:16px;
+  border:1px solid #DCE9ED;
+  border-radius:12px;
+  background:linear-gradient(180deg,#FFFFFF,#F7FBFC);
+}
+
+.direct-contact-panel__title{
+  margin:0 0 4px;
+  color:#102A36;
+  font-size:14px;
+  font-weight:800;
+}
+
+.direct-contact-panel__text{
+  margin:0 0 12px;
+  color:#4B5F67;
+  font-size:12.5px;
+}
+
+/* Deux boutons côte à côte dans le bloc Marc */
+#conseil .direct-contact-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  width:100%;
+}
+
+.direct-contact-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:48px;
+  padding:10px 8px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:780;
+  text-align:center;
+  box-sizing:border-box;
+}
+
+.direct-contact-btn-whatsapp{
+  background:#25D366;
+  border:1px solid #25D366;
+  color:#102A36;
+}
+
+.direct-contact-btn-phone{
+  background:#0DBDDB;
+  border:1px solid #0DBDDB;
+  color:#102A36;
+}
+
+/* Champs coordonnées */
+.contacts input[type="text"],
+.contacts input[type="tel"],
+.contacts input[type="email"]{
+  display:block;
+  width:100%;
+  min-height:46px;
+  margin-top:7px;
+  padding:12px 13px;
+  border:1px solid #C9DCE1;
+  border-radius:8px;
+  background:#fff;
+  color:#102A36;
+  outline:none;
+  box-sizing:border-box;
+}
+
+.contacts input[type="text"]:focus,
+.contacts input[type="tel"]:focus,
+.contacts input[type="email"]:focus{
+  border-color:#007C9E;
+  box-shadow:0 0 0 3px rgba(0,124,158,.09);
+}
+
+.contact-choice-note{
+  grid-column:1/-1;
+  margin:0 0 -14px;
+  text-align:center;
+  color:#4B5F67;
+  font-size:12px;
+  line-height:1.3;
+}
+
+/* Boutons après validation */
+#success .direct-contact-actions{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:10px !important;
+  width:100% !important;
+}
+
+#success .direct-contact-btn{
+  width:100% !important;
+  min-height:48px !important;
+}
+
+@media(max-width:620px){
+  #conseil .direct-contact-actions{
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+  }
+
+  #conseil .direct-contact-btn{
+    font-size:12px;
+    padding:9px 5px;
+  }
+}
+
+</style> 
+  <style id="footer-balanced-corvee">
+.footer{
+  border-top:1px solid var(--line);
+  background:#fff;
+}
+
+.footer-inner{
+  min-height:96px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  padding:20px 0;
+}
+
+.footer-brand{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  margin-right:0;
+}
+
+.footer-logo{
+  width:170px;
+  height:auto;
+  margin:0;
+}
+
+.footer-signature{
+  display:block;
+  font-size:8px;
+  letter-spacing:.09em;
+  color:#102A36;
+  text-align:center;
+  white-space:nowrap;
+}
+
+.footer-meta{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:5px;
+  text-align:right;
+}
+
+.footer-name{
+  font-size:16px;
+  font-weight:700;
+  color:#102A36;
+}
+
+.footer-location{
+  font-size:13px;
+  color:#4B5F67;
+}
+
+@media(max-width:620px){
+  .footer-inner{
+    min-height:auto;
+    padding:12px 0;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    text-align:center;
+  }
+
+  .footer-brand{
+    margin:0;
+    align-items:center;
+  }
+
+  .footer-logo{
+    width:140px;
+    margin:0 auto;
+  }
+
+  .footer-meta{
+    align-items:center;
+    text-align:center;
+    gap:6px;
+  }
+
+  .footer-name{
+    font-size:16px;
+  }
+
+  .footer-location{
+    font-size:13px;
+  }
+}
+</style>
+  <style id="footer-balanced-corvee">
+.footer{
+  border-top:1px solid var(--line);
+  background:#fff;
+}
+
+.footer-inner{
+  min-height:96px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  padding:20px 0;
+}
+
+.footer-brand{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  margin-right:0;
+}
+
+.footer-logo{
+  width:170px;
+  height:auto;
+  margin:0;
+}
+
+.footer-signature{
+  display:block;
+  font-size:8px;
+  letter-spacing:.09em;
+  color:#102A36;
+  text-align:center;
+  white-space:nowrap;
+}
+
+.footer-meta{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:5px;
+  text-align:right;
+}
+
+.footer-name{
+  font-size:16px;
+  font-weight:700;
+  color:#102A36;
+}
+
+.footer-location{
+  font-size:13px;
+  color:#4B5F67;
+}
+
+@media(max-width:620px){
+  .footer-inner{
+    min-height:auto;
+    padding:12px 0;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    text-align:center;
+  }
+
+  .footer-brand{
+    margin:0;
+    align-items:center;
+  }
+
+  .footer-logo{
+    width:140px;
+    margin:0 auto;
+  }
+
+  .footer-meta{
+    align-items:center;
+    text-align:center;
+    gap:6px;
+  }
+
+  .footer-name{
+    font-size:16px;
+  }
+
+  .footer-location{
+    font-size:13px;
+  }
+}
+</style>
 </head>
 <body>
 <header class="header">
@@ -266,7 +575,146 @@ h1 em{font-style:normal;color:var(--primary)}
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M7 7h10M9 7V4h6v3M9 10v7M15 10v7M6 7l1 13h10l1-13"></path></svg></span><h3>Trier / recycler</h3><p>Gérer les bouteilles une fois vides.</p></article>
 </div></div></section>
 <section class="section soft" id="solution"><div class="wrap"><div class="solution-card"><div><img alt="Eau qui coule du robinet dans un verre" src="../assets/photo-robinet.png"/></div><div class="solution-copy"><h2><span class="number">3.</span>Et si vous aviez moins de bouteilles à gérer ?</h2><p>Selon vos besoins et vos habitudes, une solution de filtration adaptée peut permettre de disposer d’une eau filtrée directement à la maison et de réduire l’utilisation des bouteilles au quotidien.</p><div class="benefits"><div class="benefit"><span class="check">✓</span><div><strong>Moins de packs et de bouteilles</strong><p>Réduire la fréquence des achats à gérer.</p></div></div><div class="benefit"><span class="check">✓</span><div><strong>Plus de simplicité</strong><p>Une eau filtrée disponible directement à la maison.</p></div></div><div class="benefit"><span class="check">✓</span><div><strong>Moins de plastique</strong><p>Réduire progressivement le nombre de bouteilles utilisées par le foyer.</p></div></div></div><a class="btn btn-outline" data-track="solution_advisor" href="#conseil">Comprendre quelle solution me conviendrait ↓</a></div></div></div></section>
-<section class="section surface" id="conseil"><div class="wrap advisor"><div class="advisor-main"><h2><span class="number">4.</span>La bonne solution dépend de votre foyer</h2><p>Il n’existe pas une filtration unique adaptée à tout le monde. L’objectif est d’abord de comprendre vos habitudes, votre logement et ce que vous attendez réellement de votre eau avant de vous orienter vers une solution adaptée.</p><div class="proofs"><div class="proof"><strong>Depuis 20 ans</strong><span>AquaRun à la Réunion</span></div><div class="proof"><strong>+15 000</strong><span>Foyers équipés par AquaRun</span></div><div class="proof"><strong>+7 ans</strong><span>Marc conseiller aux côtés d’AquaRun</span></div><div class="proof"><strong>Plusieurs solutions</strong><span>Filtres et filtration adaptés à vos besoins et à votre budget.</span></div></div></div><div class="photo-card"><div class="photo-slot"><div><strong>Votre photo ici</strong>Remplacez simplement l’image prévue par votre vraie photo de Marc.</div></div><div class="photo-text"><p><strong>Je suis Marc,</strong><br/><span class="blue"><strong>Conseiller AquaRun à La Réunion.</strong></span></p><p>J’accompagne chaque foyer pour comprendre ses besoins et l’orienter vers une solution adaptée, avec un conseil personnalisé, une installation maîtrisée et un suivi de proximité.</p></div></div></div></section>
+<section class="section surface" id="conseil">
+  <div class="wrap advisor">
+
+    <div class="advisor-main">
+      <h2>
+        <span class="number">4.</span>La bonne solution dépend de votre foyer
+      </h2>
+
+      <p>
+        Il n’existe pas une filtration unique adaptée à tout le monde.
+        L’objectif est d’abord de comprendre vos habitudes, votre logement
+        et ce que vous attendez réellement de votre eau avant de vous orienter
+        vers une solution adaptée.
+      </p>
+
+      <div class="proofs">
+
+        <div class="proof">
+          <strong>20 ans</strong>
+          <span>d'expérience AquaRun</span>
+        </div>
+
+        <div class="proof">
+          <strong>+15 000</strong>
+          <span>Foyers équipés par AquaRun</span>
+        </div>
+
+        <div class="proof">
+          <strong>+7 ans</strong>
+          <span>Marc conseiller aux côtés d’AquaRun</span>
+        </div>
+
+        <div class="proof">
+          <strong>Plusieurs solutions</strong>
+          <span>Filtres et filtration adaptés à vos besoins et à votre budget.</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="photo-card">
+
+      <div class="photo-slot">
+        <div>
+          <strong>Votre photo ici</strong>
+          Remplacez simplement l’image prévue par votre vraie photo de Marc.
+        </div>
+      </div>
+
+      <div class="photo-text">
+
+        <p>
+          <strong>Je suis Marc,</strong><br/>
+          <span class="blue">
+            <strong>Conseiller AquaRun à La Réunion.</strong>
+          </span>
+        </p>
+
+        <p>
+          J’accompagne chaque foyer pour comprendre ses besoins et l’orienter
+          vers une solution adaptée, avec un conseil personnalisé,
+          une installation maîtrisée et un suivi de proximité.
+        </p>
+
+        <div class="direct-contact-panel">
+
+          <p class="direct-contact-panel__title">
+            Vous préférez échanger directement avec moi ?
+          </p>
+
+          <p class="direct-contact-panel__text">
+            Un appel ou un message suffit pour poser votre question.
+          </p>
+
+          <div class="direct-contact-actions">
+
+            <a
+              class="direct-contact-btn direct-contact-btn-whatsapp"
+              href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20souhaite%20r%C3%A9duire%20la%20corv%C3%A9e%20des%20packs%20d%E2%80%99eau%20et%20savoir%20quelle%20solution%20pourrait%20%C3%AAtre%20adapt%C3%A9e%20%C3%A0%20mon%20foyer.%20Pouvez-vous%20me%20conseiller%20%3F"
+              target="_blank"
+              rel="noopener"
+              data-direct-contact="whatsapp"
+            >
+              Écrire sur WhatsApp
+            </a>
+
+            <a
+              class="direct-contact-btn direct-contact-btn-phone"
+              href="tel:+262693415391"
+              data-direct-contact="phone"
+            >
+              Appeler Marc
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="direct-contact-panel">
+
+  <p class="direct-contact-panel__title">
+    Vous préférez échanger directement avec moi ?
+  </p>
+
+  <p class="direct-contact-panel__text">
+    Un appel ou un message suffit pour poser votre question.
+  </p>
+
+  <div class="direct-contact-actions">
+
+    <a
+      class="direct-contact-btn direct-contact-btn-whatsapp"
+      href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20souhaite%20r%C3%A9duire%20la%20corv%C3%A9e%20des%20packs%20d%E2%80%99eau%20et%20savoir%20quelle%20solution%20pourrait%20%C3%AAtre%20adapt%C3%A9e%20%C3%A0%20mon%20foyer.%20Pouvez-vous%20me%20conseiller%20%3F"
+      target="_blank"
+      rel="noopener"
+      data-direct-contact="whatsapp"
+    >
+      Écrire sur WhatsApp
+    </a>
+
+    <a
+      class="direct-contact-btn direct-contact-btn-phone"
+      href="tel:+262693415391"
+      data-direct-contact="phone"
+    >
+      Appeler Marc
+    </a>
+
+  </div>
+
+</div>
+
+</div></div></div></section>
 <section class="section soft" id="formulaire"><div class="narrow"><div class="section-title"><h2><span class="number">5.</span>Quelle solution serait adaptée à votre foyer ?</h2><p>Quelques réponses suffisent pour préparer un conseil plus pertinent.</p></div><form class="form-card" id="leadForm" novalidate="" action="https://script.google.com/macros/s/AKfycbzNAwXho382vhEBPrOIVzdPO7IPKxFPXIdyvPSbeU5fZM6YI1hoeApf0eESioTwotgJ/exec" method="post" target="crm_sink">
 <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"/>
 <input type="hidden" name="mode" id="crm_mode" value="packs"/>
@@ -280,15 +728,140 @@ h1 em{font-style:normal;color:var(--primary)}
 <input type="hidden" name="landing" id="crm_landing" value="Bouteilles V4.4"/>
 <input type="hidden" name="utm_source" id="crm_utm_source" value=""/>
 <input type="hidden" name="utm_campaign" id="crm_utm_campaign" value=""/>
-<input type="hidden" name="utm_content" id="crm_utm_content" value="bouteilles_corvee_v1"/><div class="progress"><span class="on" id="prog1"></span><span id="prog2"></span></div><div id="step1"><div class="questions"><fieldset><legend>Votre priorité aujourd’hui ?</legend><label class="choice"><input name="priority" required="" type="radio" value="bouteilles"/>Réduire les bouteilles</label><label class="choice"><input name="priority" type="radio" value="gout"/>Améliorer le goût de l’eau</label><label class="choice"><input name="priority" type="radio" value="maitrise"/>Mieux maîtriser l’eau que nous consommons</label><label class="choice"><input name="priority" type="radio" value="conseil"/>Je souhaite simplement être conseillé</label></fieldset><fieldset><legend>Combien de personnes vivent dans votre foyer ?</legend><label class="choice"><input name="household" required="" type="radio" value="1-2"/>1 à 2</label><label class="choice"><input name="household" type="radio" value="3-4"/>3 à 4</label><label class="choice"><input name="household" type="radio" value="5+"/>5 et plus</label></fieldset><fieldset><legend>Vous êtes :</legend><label class="choice"><input name="housing" required="" type="radio" value="owner"/>Propriétaire</label><label class="choice"><input name="housing" type="radio" value="tenant"/>Locataire</label></fieldset><fieldset><legend>Quand aimeriez-vous avancer ?</legend><label class="choice"><input name="timing" required="" type="radio" value="now"/>Dès que possible</label><label class="choice"><input name="timing" type="radio" value="weeks"/>Dans les prochaines semaines</label><label class="choice"><input name="timing" type="radio" value="research"/>Je me renseigne</label></fieldset></div><div class="form-actions"><button class="btn btn-primary" id="nextBtn" type="button">Continuer</button></div></div><div class="hidden" id="step2"><div class="contacts"><label>Prénom et nom *<input autocomplete="name" name="firstname" placeholder="Ex. Jean Payet" required="" type="text"/></label><label>Téléphone *<input autocomplete="tel" name="phone" placeholder="06 92 00 00 00" required="" type="tel"/></label><label>Commune *<input name="city" placeholder="Ex. Saint-Pierre" required="" type="text"/></label><div class="contact-mode"><strong>Mode de contact préféré *</strong><div class="inline"><label class="choice"><input name="contact" required="" type="radio" value="tel"/>Téléphone</label><label class="choice"><input name="contact" type="radio" value="wa"/>WhatsApp</label></div></div></div><div class="form-actions" style="justify-content:space-between;gap:12px"><button class="btn btn-outline" id="backBtn" type="button">Retour</button><button class="btn btn-primary" type="submit">Recevoir mon conseil personnalisé</button></div><p class="privacy">Vos informations servent uniquement à traiter votre demande et à vous recontacter.</p></div><div class="success hidden" id="success"><div class="success-badge">✓</div><h3>Merci, votre demande est enregistrée.</h3><p>Vos réponses permettront de mieux comprendre votre besoin avant la prise de contact.</p><p><strong>Marc — Conseiller AquaRun</strong></p></div></form></div></section>
+<input type="hidden" name="utm_content" id="crm_utm_content" value="bouteilles_corvee_v1"/><div class="progress"><span class="on" id="prog1"></span><span id="prog2"></span></div><div id="step1"><div class="questions"><fieldset><legend>Votre priorité aujourd’hui ?</legend><label class="choice"><input name="priority" required="" type="radio" value="bouteilles"/>Réduire les bouteilles</label><label class="choice"><input name="priority" type="radio" value="gout"/>Améliorer le goût de l’eau</label><label class="choice"><input name="priority" type="radio" value="maitrise"/>Mieux maîtriser l’eau que nous consommons</label><label class="choice"><input name="priority" type="radio" value="conseil"/>Je souhaite simplement être conseillé</label></fieldset><fieldset><legend>Combien de personnes vivent dans votre foyer ?</legend><label class="choice"><input name="household" required="" type="radio" value="1-2"/>1 à 2</label><label class="choice"><input name="household" type="radio" value="3-4"/>3 à 4</label><label class="choice"><input name="household" type="radio" value="5+"/>5 et plus</label></fieldset><fieldset><legend>Vous êtes :</legend><label class="choice"><input name="housing" required="" type="radio" value="owner"/>Propriétaire</label><label class="choice"><input name="housing" type="radio" value="tenant"/>Locataire</label></fieldset><fieldset><legend>Quand aimeriez-vous avancer ?</legend><label class="choice"><input name="timing" required="" type="radio" value="now"/>Dès que possible</label><label class="choice"><input name="timing" type="radio" value="weeks"/>Dans les prochaines semaines</label><label class="choice"><input name="timing" type="radio" value="research"/>Je me renseigne</label></fieldset></div><div class="form-actions"><button class="btn btn-primary" id="nextBtn" type="button">Continuer</button></div></div><div class="hidden" id="step2">
+
+  <div class="contact-intro">
+    <strong>Vos réponses me permettent déjà de mieux comprendre votre situation.</strong>
+    <span>Laissez vos coordonnées pour que je puisse vous recontacter et vous conseiller.</span>
+  </div>
+
+  <div class="contacts">
+
+    <label>
+      Nom et/ou Prénom *
+      <input
+        autocomplete="name"
+        name="firstname"
+        placeholder="Ex. Payet Marie"
+        required=""
+        type="text"
+      />
+    </label>
+
+    <p class="contact-choice-note">
+      Téléphone ou e-mail — au moins un des deux.
+    </p>
+
+    <label>
+      Téléphone
+      <input
+        autocomplete="tel"
+        name="phone"
+        placeholder="06 92 00 00 00"
+        type="tel"
+      />
+    </label>
+
+    <label>
+      E-mail
+      <input
+        autocomplete="email"
+        name="email"
+        placeholder="exemple@email.fr"
+        type="email"
+      />
+    </label>
+
+    <label>
+      Commune *
+      <input
+        name="city"
+        placeholder="Ex. Saint-Pierre"
+        required=""
+        type="text"
+      />
+    </label>
+
+  </div>
+
+  <div class="form-actions" style="justify-content:space-between;gap:12px">
+    <button class="btn btn-outline" id="backBtn" type="button">Retour</button>
+    <button class="btn btn-primary" type="submit">
+      Recevoir mon conseil personnalisé
+    </button>
+  </div>
+
+  <p class="privacy">
+    Vos coordonnées servent uniquement à répondre à votre demande et à vous recontacter. Pas de démarchage forcé.
+  </p>
+
+</div><div class="success hidden" id="success">
+
+  <div class="success-badge">✓</div>
+
+  <h3>Merci, votre demande est enregistrée.</h3>
+
+  <p>
+    Vos réponses me permettront de mieux comprendre votre besoin avant la prise de contact.
+  </p>
+
+  <p><strong>Marc — Conseiller AquaRun</strong></p>
+
+  <div class="direct-contact-panel">
+
+    <p class="direct-contact-panel__title">
+      Vous souhaitez échanger maintenant ?
+    </p>
+
+    <p class="direct-contact-panel__text">
+      Vous pouvez m’écrire sur WhatsApp ou m’appeler directement.
+    </p>
+
+    <div class="direct-contact-actions">
+
+      <a
+        class="direct-contact-btn direct-contact-btn-whatsapp"
+        href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20souhaite%20r%C3%A9duire%20la%20corv%C3%A9e%20des%20packs%20d%E2%80%99eau%20et%20savoir%20quelle%20solution%20pourrait%20%C3%AAtre%20adapt%C3%A9e%20%C3%A0%20mon%20foyer.%20Pouvez-vous%20me%20conseiller%20%3F"
+        target="_blank"
+        rel="noopener"
+        data-direct-contact="whatsapp"
+      >
+        Écrire à Marc sur WhatsApp
+      </a>
+
+      <a
+        class="direct-contact-btn direct-contact-btn-phone"
+        href="tel:+262693415391"
+        data-direct-contact="phone"
+      >
+        ☎ Appeler Marc
+      </a>
+
+    </div>
+
+  </div>
+
+</div></form></div></section>
 </main>
 <iframe name="crm_sink" id="crm_sink" title="Transmission CRM" style="display:none"></iframe>
-<footer class="footer"><div class="wrap footer-inner"><div class="footer-brand">
-  <img alt="AquaRun" class="footer-logo" src="../assets/aquarun-logo.png"/>
-  <span class="footer-signature">
-    FILTRATION &amp; TRAITEMENT DE L’EAU
-  </span>
-</div><span>Marc — Conseiller AquaRun</span><span>Conseil et accompagnement à La Réunion</span></div></footer>
+<footer class="footer">
+  <div class="wrap footer-inner">
+
+    <div class="footer-brand">
+      <img alt="AquaRun" class="footer-logo" src="../assets/aquarun-logo.png"/>
+      <span class="footer-signature">
+        FILTRATION &amp; TRAITEMENT DE L’EAU
+      </span>
+    </div>
+
+    <div class="footer-meta">
+      <span class="footer-name">Marc — Conseiller AquaRun</span>
+      <span class="footer-location">Conseil et accompagnement à La Réunion</span>
+    </div>
+
+  </div>
+</footer>
+  
 <script>
 window.dataLayer=window.dataLayer||[];
 const q=s=>document.querySelector(s), qa=s=>[...document.querySelectorAll(s)];
@@ -347,6 +920,16 @@ qa('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
 ['#packsWeek','#packPrice','#bottlesPack','#fiveWeek','#fivePrice'].forEach(sel=>q(sel).addEventListener('input',()=>calculate(false)));
 q('#calcBtn').addEventListener('click',()=>calculate(true));
 qa('[data-track]').forEach(a=>a.addEventListener('click',()=>window.dataLayer.push({event:'cta_click',cta:a.dataset.track})));
+ qa('[data-direct-contact]').forEach(a=>a.addEventListener('click',()=>{
+  const channel=a.dataset.directContact;
+
+  window.dataLayer.push({
+    event:channel==='phone' ? 'click_phone' : 'click_whatsapp',
+    contact_channel:channel,
+    landing:'corvee',
+    angle:'Corvée'
+  });
+})); 
 
 // Attribution invisible de la publicité vers le CRM.
 // Le design et le formulaire visible restent identiques à la V4.4.
@@ -368,9 +951,10 @@ q('#crm_utm_content').value=params.get('utm_content')||defaultUtmContent;
 function groupValid(name){return !!document.querySelector(`input[name="${name}"]:checked`)}
 q('#nextBtn').addEventListener('click',()=>{
   if(!['priority','household','housing','timing'].every(groupValid)){alert('Merci de répondre aux quatre questions pour continuer.');return}
+  q('#conseil .direct-contact-panel')?.classList.add('hidden');
   q('#step1').classList.add('hidden');q('#step2').classList.remove('hidden');q('#prog1').classList.remove('on');q('#prog2').classList.add('on');q('#formulaire').scrollIntoView({behavior:'smooth'});window.dataLayer.push({event:'form_step_1_complete'});
 });
-q('#backBtn').addEventListener('click',()=>{q('#step2').classList.add('hidden');q('#step1').classList.remove('hidden');q('#prog2').classList.remove('on');q('#prog1').classList.add('on')});
+q('#backBtn').addEventListener('click',()=>{q('#step2').classList.add('hidden');q('#step1').classList.remove('hidden');q('#prog2').classList.remove('on');q('#prog1').classList.add('on');q('#conseil .direct-contact-panel')?.classList.remove('hidden');});
 
 const form=q('#leadForm');
 const submitBtn=form.querySelector('button[type="submit"]');
@@ -381,12 +965,21 @@ sink.addEventListener('load',()=>{
   crmSubmitted=false;
   q('#step2').classList.add('hidden');
   q('#success').classList.remove('hidden');
+  q('#conseil .direct-contact-panel')?.classList.add('hidden');
   submitBtn.disabled=false;
   submitBtn.textContent='Recevoir mon conseil personnalisé';
   window.dataLayer.push({event:'lead_form_submit'});
 });
 
 form.addEventListener('submit',e=>{
+    const phoneValue=(form.querySelector('[name="phone"]').value||'').trim();
+  const emailValue=(form.querySelector('[name="email"]').value||'').trim();
+
+  if(!phoneValue && !emailValue){
+    e.preventDefault();
+    alert('Merci de renseigner au moins un téléphone ou un e-mail.');
+    return;
+  }
   if(!form.checkValidity()){
     e.preventDefault();
     form.reportValidity();
