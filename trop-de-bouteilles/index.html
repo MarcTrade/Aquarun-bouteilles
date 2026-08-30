@@ -714,16 +714,29 @@ sink.addEventListener('load',()=>{
 });
 
 form.addEventListener('submit',e=>{
+
+  const phoneValue=form.elements.phone.value.trim();
+  const emailValue=form.elements.email.value.trim();
+
+  if(!phoneValue && !emailValue){
+    e.preventDefault();
+    alert('Merci d’indiquer au moins un téléphone ou un e-mail.');
+    form.elements.phone.focus();
+    return;
+  }
+
   if(!form.checkValidity()){
     e.preventDefault();
     form.reportValidity();
     return;
   }
+
   calculate(false);
   syncCrmFields();
   crmSubmitted=true;
   submitBtn.disabled=true;
   submitBtn.textContent='Envoi en cours…';
+
   // Soumission native dans un iframe invisible : évite les problèmes CORS avec Google Apps Script.
   // Le navigateur poursuit la soumission grâce à action/method/target définis sur le formulaire.
 });
