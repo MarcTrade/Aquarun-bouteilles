@@ -668,6 +668,64 @@ h1 em{font-style:normal;color:var(--primary)}
   border-color:#20BD5A !important;
 }
 </style>
+  <style id="success-contact-buttons">
+#success .direct-contact-actions{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+
+#success .direct-contact-btn{
+  width:100%;
+}
+</style>
+  <style id="contact-fields-harmony">
+
+.contact-choice{
+  grid-column:1/-1;
+  padding:12px 14px;
+  background:#F7FBFC;
+  border:1px solid #DCE9ED;
+  border-radius:10px;
+}
+
+.contact-choice strong{
+  display:block;
+  color:#102A36;
+  font-size:14px;
+  margin-bottom:2px;
+}
+
+.contact-choice span{
+  display:block;
+  color:#4B5F67;
+  font-size:12px;
+}
+
+.contacts input[type="text"],
+.contacts input[type="tel"],
+.contacts input[type="email"]{
+  display:block;
+  width:100%;
+  min-height:46px;
+  margin-top:7px;
+  padding:12px 13px;
+  border:1px solid #C9DCE1;
+  border-radius:8px;
+  background:#fff;
+  color:#102A36;
+  outline:none;
+  box-sizing:border-box;
+}
+
+.contacts input[type="text"]:focus,
+.contacts input[type="tel"]:focus,
+.contacts input[type="email"]:focus{
+  border-color:#007C9E;
+  box-shadow:0 0 0 3px rgba(0,124,158,.09);
+}
+
+</style>
 </head>
 <body>
 <header class="header">
@@ -827,15 +885,7 @@ h1 em{font-style:normal;color:var(--primary)}
 
   <p><strong>Marc — Conseiller AquaRun</strong></p>
 
-  #success .direct-contact-actions{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:10px;
-}
-
-#success .direct-contact-btn{
-  width:100%;
-}
+ 
 </div>
 
 </div></form></div></section>
