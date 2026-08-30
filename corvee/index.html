@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Calculez votre budget bouteilles | AquaRun</title>
+<title>Calculez votre consommation de bouteilles | AquaRun</title>
 <meta content="Estimez votre budget actuel en bouteilles d'eau et découvrez une solution de filtration adaptée à votre foyer à La Réunion." name="description"/>
 <style>
 :root{--primary:#007C9E;--secondary:#102A36;--accent:#0DBDDB;--bg:#F7FBFC;--text:#131618;--muted:#4B5F67;--line:#DCE9ED;--card:#fff;--soft:#EEF8FA;--radius:8px;--shadow:0 18px 50px rgba(16,42,54,.08)}
@@ -567,7 +567,7 @@ h1 em{font-style:normal;color:var(--primary)}
 </div>
 <div class="hero-callout">Moins de contrainte,<br><strong>plus de confort au quotidien.</strong></div>
 </section>
-<section class="section soft" id="calculateur"><div class="narrow"><div class="section-title"><h2><span class="number">1.</span>Calculez votre budget bouteilles</h2><p>Choisissez votre mode d’achat puis renseignez vos habitudes actuelles.</p></div><div class="calc-card"><div class="panel"><div class="panel-title">Votre consommation actuelle</div><div class="mode"><button class="active" data-mode="packs" type="button">Packs de bouteilles</button><button data-mode="five" type="button">Bouteilles de 5 L</button></div><div class="fields" id="packFields"><div class="field"><label for="packsWeek">Packs achetés par semaine</label><div class="control"><input id="packsWeek" min="0" step="0.5" type="number" value="3"/><span class="unit">packs</span></div></div><div class="field"><label for="packPrice">Prix moyen d’un pack</label><div class="control"><input id="packPrice" inputmode="decimal" value="4,50"/><span class="unit">€</span></div></div><div class="field"><label for="bottlesPack">Bouteilles dans un pack <span style="font-weight:500;color:#4B5F67">(optionnel)</span></label><div class="control"><input id="bottlesPack" min="1" step="1" type="number" value="6"/><span class="unit">bouteilles</span></div></div></div><div class="fields hidden" id="fiveFields"><div class="field"><label for="fiveWeek">Bouteilles de 5 L achetées par semaine</label><div class="control"><input id="fiveWeek" min="0" step="0.5" type="number" value="4"/><span class="unit">bouteilles</span></div></div><div class="field"><label for="fivePrice">Prix moyen d’une bouteille de 5 L</label><div class="control"><input id="fivePrice" inputmode="decimal" value="2,50"/><span class="unit">€</span></div></div></div><button class="btn btn-primary calc-btn" id="calcBtn" type="button">Voir mon estimation</button></div><div class="arrow">→</div><div aria-live="polite" class="panel result"><div class="panel-title" style="text-align:center">Votre budget bouteilles estimé</div><div class="numbers"><div><strong id="monthly">59 €</strong><span>par mois</span></div><div class="sep"></div><div><strong id="yearly">702 €</strong><span>par an</span></div></div><div class="secondary-result" id="count">Soit environ <strong>936 bouteilles</strong> achetées par an</div><div class="secondary-result hidden" id="volume"></div><p class="note">Estimation basée uniquement sur les informations renseignées. Elle ne représente pas une économie garantie avec une solution AquaRun.</p><a class="small-cta" data-track="calculator_next" href="#contraintes">Et au-delà du budget ? ↓</a></div></div></div></section>
+<section class="section soft" id="calculateur"><div class="narrow"><div class="section-title"><h2><span class="number">1.</span>Calculez votre consommation de bouteilles</h2><p>Renseignez vos habitudes pour visualiser combien de bouteilles passent chez vous au quotidien.</p></div><div class="calc-card"><div class="panel"><div class="panel-title">Votre consommation actuelle</div><div class="mode"><button class="active" data-mode="packs" type="button">Packs de bouteilles</button><button data-mode="five" type="button">Bouteilles de 5 L</button></div><div class="fields" id="packFields"><div class="field"><label for="packsWeek">Packs achetés par semaine</label><div class="control"><input id="packsWeek" min="0" step="0.5" type="number" value="3"/><span class="unit">packs</span></div></div><div class="field"><label for="packPrice">Prix moyen d’un pack</label><div class="control"><input id="packPrice" inputmode="decimal" value="4,50"/><span class="unit">€</span></div></div><div class="field"><label for="bottlesPack">Bouteilles dans un pack <span style="font-weight:500;color:#4B5F67">(optionnel)</span></label><div class="control"><input id="bottlesPack" min="1" step="1" type="number" value="6"/><span class="unit">bouteilles</span></div></div></div><div class="fields hidden" id="fiveFields"><div class="field"><label for="fiveWeek">Bouteilles de 5 L achetées par semaine</label><div class="control"><input id="fiveWeek" min="0" step="0.5" type="number" value="4"/><span class="unit">bouteilles</span></div></div><div class="field"><label for="fivePrice">Prix moyen d’une bouteille de 5 L</label><div class="control"><input id="fivePrice" inputmode="decimal" value="2,50"/><span class="unit">€</span></div></div></div><button class="btn btn-primary calc-btn" id="calcBtn" type="button">Voir mon estimation</button></div><div class="arrow">→</div><div aria-live="polite" class="panel result"><div class="panel-title" style="text-align:center">Votre budget bouteilles estimé</div><div class="numbers"><div><strong id="monthly">59 €</strong><span>par mois</span></div><div class="sep"></div><div><strong id="yearly">702 €</strong><span>par an</span></div></div><div class="secondary-result" id="count">Soit environ <strong>936 bouteilles</strong> achetées par an</div><div class="secondary-result hidden" id="volume"></div><p class="note">Estimation basée uniquement sur les informations renseignées. Elle ne représente pas une économie garantie avec une solution AquaRun.</p><a class="small-cta" data-track="calculator_next" href="#contraintes">Et au-delà du budget ? ↓</a></div></div></div></section>
 <section class="section surface" id="contraintes"><div class="narrow"><div class="section-title"><h2><span class="number">2.</span>Ce n’est pas seulement une question de budget</h2></div><div class="routine">
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 4h2l2 11h10l3-8H6"></path><circle cx="9" cy="19" r="1.4"></circle><circle cx="17" cy="19" r="1.4"></circle></svg></span><h3>Acheter</h3><p>Penser aux bouteilles lors des courses.</p></article>
 <article><span class="ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M8 21v-7l2-3 1-5 3 1-1 4 3 2 2 7"></path><circle cx="12" cy="3.5" r="2"></circle><path d="M5 12h4"></path></svg></span><h3>Porter</h3><p>Du chariot au coffre, puis jusqu’à la maison.</p></article>
@@ -680,41 +680,9 @@ h1 em{font-style:normal;color:var(--primary)}
   </div>
 </section>
 
-<div class="direct-contact-panel">
 
-  <p class="direct-contact-panel__title">
-    Vous préférez échanger directement avec moi ?
-  </p>
 
-  <p class="direct-contact-panel__text">
-    Un appel ou un message suffit pour poser votre question.
-  </p>
-
-  <div class="direct-contact-actions">
-
-    <a
-      class="direct-contact-btn direct-contact-btn-whatsapp"
-      href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20souhaite%20r%C3%A9duire%20la%20corv%C3%A9e%20des%20packs%20d%E2%80%99eau%20et%20savoir%20quelle%20solution%20pourrait%20%C3%AAtre%20adapt%C3%A9e%20%C3%A0%20mon%20foyer.%20Pouvez-vous%20me%20conseiller%20%3F"
-      target="_blank"
-      rel="noopener"
-      data-direct-contact="whatsapp"
-    >
-      Écrire sur WhatsApp
-    </a>
-
-    <a
-      class="direct-contact-btn direct-contact-btn-phone"
-      href="tel:+262693415391"
-      data-direct-contact="phone"
-    >
-      Appeler Marc
-    </a>
-
-  </div>
-
-</div>
-
-</div></div></div></section>
+  
 <section class="section soft" id="formulaire"><div class="narrow"><div class="section-title"><h2><span class="number">5.</span>Quelle solution serait adaptée à votre foyer ?</h2><p>Quelques réponses suffisent pour préparer un conseil plus pertinent.</p></div><form class="form-card" id="leadForm" novalidate="" action="https://script.google.com/macros/s/AKfycbzNAwXho382vhEBPrOIVzdPO7IPKxFPXIdyvPSbeU5fZM6YI1hoeApf0eESioTwotgJ/exec" method="post" target="crm_sink">
 <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"/>
 <input type="hidden" name="mode" id="crm_mode" value="packs"/>
