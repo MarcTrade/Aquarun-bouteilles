@@ -925,6 +925,8 @@ function groupValid(name){
   return !!document.querySelector(`input[name="${name}"]:checked`);
 }
 
+const directContactActions=q('#conseil .direct-contact-actions');
+
 q('#nextBtn').addEventListener('click',()=>{
 
   if(!['household','housing','timing'].every(groupValid)){
@@ -938,6 +940,10 @@ q('#nextBtn').addEventListener('click',()=>{
   q('#prog1').classList.remove('on');
   q('#prog2').classList.add('on');
 
+  if(directContactActions){
+    directContactActions.classList.add('hidden');
+  }
+
   setTimeout(()=>{
     q('#step2').scrollIntoView({
       behavior:'smooth',
@@ -947,6 +953,25 @@ q('#nextBtn').addEventListener('click',()=>{
 
   window.dataLayer.push({
     event:'form_step_1_complete'
+  });
+
+});
+
+q('#backBtn').addEventListener('click',()=>{
+
+  q('#step2').classList.add('hidden');
+  q('#step1').classList.remove('hidden');
+
+  q('#prog2').classList.remove('on');
+  q('#prog1').classList.add('on');
+
+  if(directContactActions){
+    directContactActions.classList.remove('hidden');
+  }
+
+  q('#formulaire').scrollIntoView({
+    behavior:'smooth',
+    block:'start'
   });
 
 });
