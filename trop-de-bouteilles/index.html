@@ -1387,14 +1387,7 @@ function calculate(showFeedback=false){
     },1200);
   }
 
-  window.dataLayer.push({
-    event:'calculator_result',
-    mode,
-    bottles_annual:Math.round(calcState.count),
-    bottles_monthly:Math.round(calcState.monthlyCount),
-    budget_monthly:Number(calcState.budgetMonthly.toFixed(2)),
-    budget_annual:Number(calcState.budgetAnnual.toFixed(2))
-  });
+  
 }
 
 qa('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
@@ -1405,6 +1398,15 @@ qa('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
 q('#calcBtn').addEventListener('click',()=>{
 
   calculate(true);
+
+  window.dataLayer.push({
+    event:'calculator_result',
+    mode,
+    bottles_annual:Math.round(calcState.count),
+    bottles_monthly:Math.round(calcState.monthlyCount),
+    budget_monthly:Number(calcState.budgetMonthly.toFixed(2)),
+    budget_annual:Number(calcState.budgetAnnual.toFixed(2))
+  });
 
   setTimeout(()=>{
     q('#resultat-estimation').scrollIntoView({
