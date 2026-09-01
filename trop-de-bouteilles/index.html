@@ -930,8 +930,285 @@ h1 em{font-style:normal;color:var(--primary)}
 }
 
 </style>
+<style id="aquarun-meta-consent">
+
+.cookie-banner{
+  position:fixed;
+  left:20px;
+  right:20px;
+  bottom:20px;
+  z-index:9999;
+  max-width:760px;
+  margin:0 auto;
+  padding:18px;
+  background:#FFFFFF;
+  border:1px solid #DCE9ED;
+  border-radius:12px;
+  box-shadow:0 18px 50px rgba(16,42,54,.18);
+  color:#131618;
+}
+
+.cookie-banner[hidden]{
+  display:none !important;
+}
+
+.cookie-banner__title{
+  margin:0 0 6px;
+  color:#102A36;
+  font-size:16px;
+  font-weight:800;
+}
+
+.cookie-banner__text{
+  margin:0 0 14px;
+  color:#4B5F67;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.cookie-banner__actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.cookie-banner__btn{
+  min-height:44px;
+  padding:10px 14px;
+  border-radius:8px;
+  font:inherit;
+  font-size:13px;
+  font-weight:780;
+  cursor:pointer;
+}
+
+.cookie-banner__btn--accept{
+  border:1px solid #007C9E;
+  background:#007C9E;
+  color:#FFFFFF;
+}
+
+.cookie-banner__btn--refuse{
+  border:1px solid #007C9E;
+  background:#FFFFFF;
+  color:#007C9E;
+}
+
+.cookie-settings{
+  border:0;
+  padding:0;
+  background:none;
+  color:#007C9E;
+  font:inherit;
+  font-size:12px;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+@media(max-width:620px){
+
+  .cookie-banner{
+    left:12px;
+    right:12px;
+    bottom:12px;
+    padding:16px;
+  }
+
+  .cookie-banner__actions{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+</style>
+
+<script>
+(function(){
+
+  const META_PIXEL_ID='2286627652105844';
+  const CONSENT_KEY='aquarun_meta_consent';
+  const CONSENT_DURATION=180*24*60*60*1000;
+
+  function getConsent(){
+
+    try{
+
+      const raw=localStorage.getItem(CONSENT_KEY);
+
+      if(!raw)return null;
+
+      const stored=JSON.parse(raw);
+
+      if(
+        !stored ||
+        !stored.choice ||
+        !stored.timestamp ||
+        Date.now()-stored.timestamp>CONSENT_DURATION
+      ){
+        localStorage.removeItem(CONSENT_KEY);
+        return null;
+      }
+
+      return stored.choice;
+
+    }catch(e){
+      return null;
+    }
+
+  }
+
+  function saveConsent(choice){
+
+    try{
+      localStorage.setItem(
+        CONSENT_KEY,
+        JSON.stringify({
+          choice:choice,
+          timestamp:Date.now()
+        })
+      );
+    }catch(e){}
+
+  }
+
+  function loadMetaPixel(){
+
+    if(window.__aquarunMetaPixelLoaded)return;
+
+    window.__aquarunMetaPixelLoaded=true;
+
+    !function(f,b,e,v,n,t,s)
+    {
+      if(f.fbq)return;
+
+      n=f.fbq=function(){
+        n.callMethod ?
+          n.callMethod.apply(n,arguments) :
+          n.queue.push(arguments);
+      };
+
+      if(!f._fbq)f._fbq=n;
+
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s);
+
+    }(
+      window,
+      document,
+      'script',
+      'https://connect.facebook.net/en_US/fbevents.js'
+    );
+
+    fbq('init',META_PIXEL_ID);
+    fbq('track','PageView');
+
+  }
+
+  window.aquarunMetaConsent={
+    accept:function(){
+
+      saveConsent('accepted');
+
+      const banner=document.getElementById('cookieBanner');
+      if(banner)banner.hidden=true;
+
+      loadMetaPixel();
+
+    },
+
+    refuse:function(){
+
+      saveConsent('refused');
+
+      const banner=document.getElementById('cookieBanner');
+      if(banner)banner.hidden=true;
+
+      if(window.__aquarunMetaPixelLoaded){
+        window.location.reload();
+      }
+
+    },
+
+    open:function(){
+
+      const banner=document.getElementById('cookieBanner');
+      if(banner)banner.hidden=false;
+
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded',function(){
+
+    const consent=getConsent();
+    const banner=document.getElementById('cookieBanner');
+
+    if(consent==='accepted'){
+
+      if(banner)banner.hidden=true;
+      loadMetaPixel();
+
+    }else if(consent==='refused'){
+
+      if(banner)banner.hidden=true;
+
+    }else{
+
+      if(banner)banner.hidden=false;
+
+    }
+
+  });
+
+})();
+</script>
+
 </head>
 <body>
+
+<div
+  class="cookie-banner"
+  id="cookieBanner"
+  hidden
+  role="dialog"
+  aria-label="Gestion des cookies"
+>
+  <p class="cookie-banner__title">
+    Votre choix concernant les cookies
+  </p>
+
+  <p class="cookie-banner__text">
+    AquaRun utilise des traceurs Meta uniquement avec votre accord afin de mesurer l’efficacité de ses publicités et mieux comprendre les actions réalisées après un clic sur une annonce.
+  </p>
+
+  <div class="cookie-banner__actions">
+
+    <button
+      class="cookie-banner__btn cookie-banner__btn--refuse"
+      type="button"
+      onclick="aquarunMetaConsent.refuse()"
+    >
+      Refuser
+    </button>
+
+    <button
+      class="cookie-banner__btn cookie-banner__btn--accept"
+      type="button"
+      onclick="aquarunMetaConsent.accept()"
+    >
+      Accepter
+    </button>
+
+  </div>
+</div>
 <header class="header">
   <div class="wrap header-inner">
 
