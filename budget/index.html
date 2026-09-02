@@ -1607,15 +1607,50 @@ const form=q('#leadForm');
 const submitBtn=form.querySelector('button[type="submit"]');
 const sink=q('#crm_sink');
 
-sink.addEventListener('load',()=>{
+window.addEventListener('message',event=>{
+  const data=event.data;
+
+  if(!data || data.source!=='aquarun_crm')return;
   if(!crmSubmitted)return;
+
   crmSubmitted=false;
-  q('#step2').classList.add('hidden');
-  q('#success').classList.remove('hidden');
-  q('#conseil .direct-contact-panel')?.classList.add('hidden');
   submitBtn.disabled=false;
   submitBtn.textContent='Recevoir mon conseil personnalisé';
-  window.dataLayer.push({event:'lead_form_submit'});
+
+  if(data.success===true){
+
+    q('#step2').classList.add('hidden');
+    q('#conseil .direct-contact-panel')?.classList.add('hidden');
+
+    const successBlock=q('#success');
+    successBlock.classList.remove('hidden');
+
+    const successContact=successBlock.querySelector('.direct-contact-panel');
+    const successActions=successBlock.querySelector('.direct-contact-actions');
+
+    if(successContact){
+      successContact.classList.remove('hidden');
+      successContact.style.display='block';
+    }
+
+    if(successActions){
+      successActions.classList.remove('hidden');
+      successActions.style.display='grid';
+    }
+
+    successBlock.scrollIntoView({
+      behavior:'smooth',
+      block:'center'
+    });
+
+    if(!data.duplicate){
+      window.dataLayer.push({event:'lead_form_submit'});
+    }
+
+    return;
+  }
+
+  alert('La demande n’a pas pu être enregistrée. Merci de réessayer ou de me contacter directement.');
 });
 
 form.addEventListener('submit',e=>{
