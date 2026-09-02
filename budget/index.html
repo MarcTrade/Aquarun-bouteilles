@@ -1380,98 +1380,87 @@ h1 em{font-style:normal;color:var(--primary)}
 </main>
 <iframe name="crm_sink" id="crm_sink" title="Transmission CRM" style="display:none"></iframe>
 <style id="footer-balanced-v1">
+
 .footer{
   border-top:1px solid var(--line);
   background:#fff;
 }
 
 .footer-inner{
-  min-height:96px;
+  min-height:72px;
+  padding:10px 0;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:28px;
-  padding:20px 0;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px 18px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
 }
 
 .footer-brand{
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:4px;
-  margin-right:0;
-}
-
-.footer-logo{
-  width:170px;
-  height:auto;
+  justify-content:center;
+  gap:3px;
   margin:0;
 }
 
+.footer-logo{
+  width:190px;
+  height:auto;
+  margin:0 auto;
+}
+
 .footer-signature{
-  display:block;
-  font-size:8px;
-  letter-spacing:.09em;
+  margin:0;
+  font-size:9px;
+  line-height:1.1;
+  letter-spacing:.12em;
   color:#102A36;
   text-align:center;
   white-space:nowrap;
 }
 
-.footer-meta{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
-  gap:5px;
-  text-align:right;
-}
-
-.footer-name{
-  font-size:16px;
-  font-weight:700;
-  color:#102A36;
-}
-
-.footer-location{
-  font-size:13px;
-  color:#4B5F67;
+.footer-inner > span{
+  margin:0;
 }
 
 @media(max-width:620px){
+
   .footer-inner{
-    min-height:auto;
+    min-height:0;
     padding:12px 0;
     flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:5px;
-    text-align:center;
+    gap:4px;
   }
 
   .footer-brand{
-    margin:0;
-    align-items:center;
+    gap:3px;
+    margin-bottom:1px;
   }
 
   .footer-logo{
-    width:170px;
-    margin:0 auto;
+    width:155px;
   }
 
-  .footer-meta{
-    align-items:center;
+  .footer-signature{
+    font-size:7px;
+    line-height:1.1;
+    letter-spacing:.09em;
+  }
+
+  .footer-inner > span{
+    width:100%;
     text-align:center;
-    gap:6px;
+    line-height:1.25;
   }
 
-  .footer-name{
-    font-size:16px;
-  }
-
-  .footer-location{
-    font-size:13px;
-  }
 }
-</style>
+
+</style>>
 
 <footer class="footer">
   <div class="wrap footer-inner">
@@ -1483,22 +1472,19 @@ h1 em{font-style:normal;color:var(--primary)}
       </span>
     </div>
 
-    <div class="footer-meta">
-  <span class="footer-name">Marc — Conseiller AquaRun</span>
-  <span class="footer-location">Conseil et accompagnement à La Réunion</span>
+    <span>Marc — Conseiller AquaRun</span>
+    <span>Conseil et accompagnement à La Réunion</span>
 
-  <button
-    class="cookie-settings"
-    type="button"
-    onclick="aquarunMetaConsent.open()"
-  >
-    Gérer les cookies
-  </button>
-</div>
+    <button
+      class="cookie-settings"
+      type="button"
+      onclick="aquarunMetaConsent.open()"
+    >
+      Gérer les cookies
+    </button>
 
   </div>
 </footer>
-
 <script>
 window.dataLayer=window.dataLayer||[];
 const q=s=>document.querySelector(s), qa=s=>[...document.querySelectorAll(s)];
@@ -1541,13 +1527,12 @@ function calculate(showFeedback=false){
     q('#volume').innerHTML=`Soit environ <strong>${formatInt(calcState.volume)} litres</strong> achetés par an`;
   }else q('#volume').classList.add('hidden');
   syncCrmFields();
-  if(showFeedback){
+   if(showFeedback){
     const panel=q('.result'),btn=q('#calcBtn');
     panel.classList.add('updated'); btn.classList.add('updated');
     const old=btn.textContent; btn.textContent='Estimation mise à jour ✓';
     setTimeout(()=>{panel.classList.remove('updated');btn.classList.remove('updated');btn.textContent=old},1200);
   }
-  window.dataLayer.push({event:'calculator_result',mode,annual:Math.round(calcState.annual),monthly:Math.round(calcState.monthly)});
 }
 
 qa('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
@@ -1557,6 +1542,15 @@ qa('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
 ['#packsWeek','#packPrice','#bottlesPack','#fiveWeek','#fivePrice'].forEach(sel=>q(sel).addEventListener('input',()=>calculate(false)));
 q('#calcBtn').addEventListener('click',()=>{
   calculate(true);
+
+  window.dataLayer.push({
+    event:'calculator_result',
+    mode,
+    budget_monthly:Math.round(calcState.monthly),
+    budget_annual:Math.round(calcState.annual),
+    bottles_annual:Math.round(calcState.count)
+  });
+
   const result=q('#resultat-estimation');
   setTimeout(()=>{
     result.scrollIntoView({
