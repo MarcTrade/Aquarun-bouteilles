@@ -930,6 +930,19 @@ h1 em{font-style:normal;color:var(--primary)}
 }
 
 </style>
+<style id="contact-choice-note-style">
+
+.contact-choice-note{
+  grid-column:1/-1;
+  margin:0 0 -14px;
+  text-align:center;
+  color:#4B5F67;
+  font-size:12px;
+  line-height:1.3;
+}
+
+</style>
+
 <style id="aquarun-meta-consent">
 
 .cookie-banner{
@@ -1468,15 +1481,19 @@ h1 em{font-style:normal;color:var(--primary)}
 <div class="form-actions"><button class="btn btn-primary" id="nextBtn" type="button">Continuer</button></div></div><div class="hidden" id="step2"><div class="contacts">
 
   <label>
-    Prénom et nom *
+    Nom et/ou Prénom *
     <input
       autocomplete="name"
       name="firstname"
-      placeholder="Ex. Jean Payet"
+      placeholder="Ex. Payet Marie"
       required=""
       type="text"
     />
   </label>
+
+  <p class="contact-choice-note">
+    Téléphone ou e-mail — au moins un des deux.
+  </p>
 
   <label>
     Téléphone
@@ -1493,7 +1510,7 @@ h1 em{font-style:normal;color:var(--primary)}
     <input
       autocomplete="email"
       name="email"
-      placeholder="exemple@email.com"
+      placeholder="exemple@email.fr"
       type="email"
     />
   </label>
