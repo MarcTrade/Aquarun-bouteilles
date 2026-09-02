@@ -1869,8 +1869,19 @@ window.addEventListener('message',event=>{
     });
 
     if(!data.duplicate){
-      window.dataLayer.push({event:'lead_form_submit'});
-    }
+
+  window.dataLayer.push({
+    event:'lead_form_submit'
+  });
+
+  if(
+    window.__aquarunMetaPixelLoaded &&
+    typeof window.fbq==='function'
+  ){
+    window.fbq('track','Lead');
+  }
+
+}
 
     return;
   }
