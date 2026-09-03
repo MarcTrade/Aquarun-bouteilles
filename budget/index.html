@@ -1310,7 +1310,10 @@ h1 em{font-style:normal;color:var(--primary)}
 <input type="hidden" name="landing" id="crm_landing" value="Bouteilles - Budget V16"/>
 <input type="hidden" name="utm_source" id="crm_utm_source" value=""/>
 <input type="hidden" name="utm_campaign" id="crm_utm_campaign" value=""/>
-<input type="hidden" name="utm_content" id="crm_utm_content" value="bouteilles_budget_12mois_v1"/><div class="progress"><span class="on" id="prog1"></span><span id="prog2"></span></div><div id="step1"><div class="questions"><input type="hidden" name="priority" value="bouteilles"/><fieldset><legend>Combien de personnes vivent dans votre foyer ?</legend><label class="choice"><input name="household" required="" type="radio" value="1-2"/>1 à 2</label><label class="choice"><input name="household" type="radio" value="3-4"/>3 à 4</label><label class="choice"><input name="household" type="radio" value="5+"/>5 et plus</label></fieldset><fieldset><legend>Vous êtes :</legend><label class="choice"><input name="housing" required="" type="radio" value="owner"/>Propriétaire</label><label class="choice"><input name="housing" type="radio" value="tenant"/>Locataire</label></fieldset><fieldset><legend>Quand aimeriez-vous avancer ?</legend><label class="choice"><input name="timing" required="" type="radio" value="now"/>Dès que possible</label><label class="choice"><input name="timing" type="radio" value="weeks"/>Dans les prochaines semaines</label><label class="choice"><input name="timing" type="radio" value="research"/>Je me renseigne</label></fieldset></div><div class="form-actions"><button class="btn btn-primary" id="nextBtn" type="button">Continuer</button></div></div><div class="hidden" id="step2">
+<input type="hidden" name="utm_content" id="crm_utm_content" value="bouteilles_budget_12mois_v1"/>
+
+<input type="hidden" name="meta_consent" id="crm_meta_consent" value=""/>
+<input type="hidden" name="meta_consent_date" id="crm_meta_consent_date" value=""/><div class="progress"><span class="on" id="prog1"></span><span id="prog2"></span></div><div id="step1"><div class="questions"><input type="hidden" name="priority" value="bouteilles"/><fieldset><legend>Combien de personnes vivent dans votre foyer ?</legend><label class="choice"><input name="household" required="" type="radio" value="1-2"/>1 à 2</label><label class="choice"><input name="household" type="radio" value="3-4"/>3 à 4</label><label class="choice"><input name="household" type="radio" value="5+"/>5 et plus</label></fieldset><fieldset><legend>Vous êtes :</legend><label class="choice"><input name="housing" required="" type="radio" value="owner"/>Propriétaire</label><label class="choice"><input name="housing" type="radio" value="tenant"/>Locataire</label></fieldset><fieldset><legend>Quand aimeriez-vous avancer ?</legend><label class="choice"><input name="timing" required="" type="radio" value="now"/>Dès que possible</label><label class="choice"><input name="timing" type="radio" value="weeks"/>Dans les prochaines semaines</label><label class="choice"><input name="timing" type="radio" value="research"/>Je me renseigne</label></fieldset></div><div class="form-actions"><button class="btn btn-primary" id="nextBtn" type="button">Continuer</button></div></div><div class="hidden" id="step2">
 <div class="contact-intro">
   <strong>Vos réponses me permettent déjà de mieux comprendre votre situation.</strong>
   <span>Laissez vos coordonnées pour que je puisse vous recontacter et vous conseiller.</span>
@@ -1506,6 +1509,31 @@ function syncCrmFields(){
   q('#crm_bottles_annual').value=Math.round(calcState.count);
   q('#crm_volume_annual').value=mode==='five'?Math.round(calcState.volume):'';
 }
+  function syncMetaConsentFields(){
+
+  try{
+
+    const raw=localStorage.getItem('aquarun_meta_consent');
+    const stored=raw ? JSON.parse(raw) : null;
+
+    q('#crm_meta_consent').value=
+      stored && stored.choice
+        ? stored.choice
+        : '';
+
+    q('#crm_meta_consent_date').value=
+      stored && stored.timestamp
+        ? new Date(stored.timestamp).toISOString()
+        : '';
+
+  }catch(e){
+
+    q('#crm_meta_consent').value='';
+    q('#crm_meta_consent_date').value='';
+
+  }
+
+}
 
 function calculate(showFeedback=false){
   let annual=0,count=0,volume=0;
@@ -1678,8 +1706,9 @@ form.addEventListener('submit',e=>{
     return;
   }
   calculate(false);
-  syncCrmFields();
-  crmSubmitted=true;
+syncCrmFields();
+syncMetaConsentFields();
+crmSubmitted=true;
   submitBtn.disabled=true;
   submitBtn.textContent='Envoi en cours…';
   // Soumission native dans un iframe invisible : évite les problèmes CORS avec Google Apps Script.
