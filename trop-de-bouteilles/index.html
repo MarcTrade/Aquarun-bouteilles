@@ -1420,7 +1420,10 @@ h1 em{font-style:normal;color:var(--primary)}
 <input id="crm_landing" name="landing" type="hidden" value="Bouteilles d'eau - V1"/>
 <input id="crm_utm_source" name="utm_source" type="hidden" value=""/>
 <input id="crm_utm_campaign" name="utm_campaign" type="hidden" value=""/>
-<input id="crm_utm_content" name="utm_content" type="hidden" value="bouteilles_eau_v1"/><div class="progress"><span class="on" id="prog1"></span><span id="prog2"></span></div><div id="step1"><div class="questions">
+<input id="crm_utm_content" name="utm_content" type="hidden" value="bouteilles_eau_v1"/>
+
+<input type="hidden" name="meta_consent" id="crm_meta_consent" value=""/>
+<input type="hidden" name="meta_consent_date" id="crm_meta_consent_date" value=""/><div class="progress"><span class="on" id="prog1"></span><span id="prog2"></span></div><div id="step1"><div class="questions">
 
   <input name="priority" type="hidden" value="bouteilles"/>
 
@@ -1622,6 +1625,31 @@ function syncCrmFields(){
   q('#crm_budget_annual').value=calcState.budgetAnnual.toFixed(2);
   q('#crm_bottles_annual').value=Math.round(calcState.count);
   q('#crm_volume_annual').value=mode==='five'?Math.round(calcState.volume):'';
+}
+  function syncMetaConsentFields(){
+
+  try{
+
+    const raw=localStorage.getItem('aquarun_meta_consent');
+    const stored=raw ? JSON.parse(raw) : null;
+
+    q('#crm_meta_consent').value=
+      stored && stored.choice
+        ? stored.choice
+        : '';
+
+    q('#crm_meta_consent_date').value=
+      stored && stored.timestamp
+        ? new Date(stored.timestamp).toISOString()
+        : '';
+
+  }catch(e){
+
+    q('#crm_meta_consent').value='';
+    q('#crm_meta_consent_date').value='';
+
+  }
+
 }
 
 function calculate(showFeedback=false){
@@ -1872,8 +1900,9 @@ form.addEventListener('submit',e=>{
   }
 
   calculate(false);
-  syncCrmFields();
-  crmSubmitted=true;
+syncCrmFields();
+syncMetaConsentFields();
+crmSubmitted=true;
   submitBtn.disabled=true;
   submitBtn.textContent='Envoi en cours…';
 
