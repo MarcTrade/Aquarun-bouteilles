@@ -1347,6 +1347,89 @@ h1 em{font-style:normal;color:var(--primary)}
 }
 
 </style>
+  <style id="section4-bio-equilibre-final">
+
+#conseil .photo-card{
+  display:grid !important;
+  grid-template-columns:minmax(190px,.9fr) minmax(0,1.1fr) !important;
+  gap:24px !important;
+  align-items:center !important;
+  padding:28px !important;
+}
+
+#conseil .photo-slot{
+  height:280px !important;
+  min-height:280px !important;
+}
+
+#conseil .photo-text{
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+}
+
+#conseil .photo-text p:first-child{
+  margin:0 0 16px !important;
+}
+
+#conseil .photo-text p:last-child{
+  margin:0 !important;
+  font-size:15px !important;
+  line-height:1.55 !important;
+}
+
+@media(max-width:620px){
+
+  #conseil .photo-card{
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+    padding:20px !important;
+  }
+
+  #conseil .photo-slot{
+    height:260px !important;
+    min-height:260px !important;
+  }
+
+}
+
+</style>
+  <style id="espacement-4-module-5-final">
+
+/* Section 4 → module */
+#conseil{
+  padding-bottom:18px !important;
+}
+
+/* Module intermédiaire */
+.contact-transition-section{
+  padding-top:0 !important;
+  padding-bottom:18px !important;
+}
+
+/* Module → section 5 */
+#formulaire{
+  padding-top:30px !important;
+}
+
+@media(max-width:620px){
+
+  #conseil{
+    padding-bottom:14px !important;
+  }
+
+  .contact-transition-section{
+    padding-top:0 !important;
+    padding-bottom:14px !important;
+  }
+
+  #formulaire{
+    padding-top:24px !important;
+  }
+
+}
+
+</style>
 </head>
   <style id="header-whatsapp-final">
 
@@ -1636,70 +1719,7 @@ h1 em{font-style:normal;color:var(--primary)}
       J’accompagne chaque foyer pour comprendre ses besoins et l’orienter vers une solution adaptée, avec un conseil personnalisé, une installation maîtrisée et un suivi de proximité.
     </p>
 
-    <div class="direct-contact-panel">
-
-  <p class="direct-contact-panel__title">
-    Si vous souhaitez aller plus loin
-  </p>
-
-  <p class="direct-contact-panel__text">
-    Vous pouvez échanger directement avec moi, ou répondre à quelques questions juste en dessous pour préparer un échange plus pertinent.
-  </p>
-
-      <div class="direct-contact-actions">
-
-        
-  </div>
-
-</div></div></section>
-
-<section class="contact-transition-section">
-  <div class="narrow">
-
-    <div class="contact-transition-card">
-
-      <div class="contact-transition-copy">
-
-        <p class="contact-transition-title">
-          Si vous souhaitez aller plus loin
-        </p>
-
-        <p class="contact-transition-text">
-          Vous pouvez échanger directement avec moi ou répondre à quelques questions pour préparer un conseil plus pertinent.
-        </p>
-
-      </div>
-
-      <div class="contact-transition-actions">
-
-        <a
-          class="contact-transition-btn contact-transition-btn-whatsapp"
-          href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20viens%20de%20calculer%20le%20nombre%20de%20bouteilles%20utilis%C3%A9es%20par%20mon%20foyer%20et%20je%20souhaite%20savoir%20quelle%20solution%20de%20filtration%20pourrait%20m%E2%80%99aider%20%C3%A0%20en%20utiliser%20moins.%20Pouvons-nous%20en%20discuter%20%3F"
-          target="_blank"
-          rel="noopener"
-          data-direct-contact="whatsapp"
-        >
-          Écrire sur WhatsApp
-        </a>
-
-        <a
-          class="contact-transition-btn contact-transition-btn-phone"
-          href="tel:+262693415391"
-          data-direct-contact="phone"
-        >
-          Appeler Marc
-        </a>
-
-        <a
-          class="contact-transition-btn contact-transition-btn-form"
-          href="#formulaire"
-          data-track="direct_form"
-        >
-          Répondre aux questions ↓
-        </a>
-
-      </div>
-
+    
     </div>
 
   </div>
