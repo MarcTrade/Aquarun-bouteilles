@@ -1185,6 +1185,105 @@ h1 em{font-style:normal;color:var(--primary)}
 </script>
 
 </head>
+  <style id="header-whatsapp-final">
+
+.header-inner{
+  grid-template-columns:auto auto 1fr auto !important;
+}
+
+.header-whatsapp{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+
+  min-height:42px;
+  padding:9px 15px;
+
+  background:#25D366;
+  border:1px solid #25D366;
+  border-radius:8px;
+
+  color:#102A36;
+  text-decoration:none;
+
+  font-size:13px;
+  font-weight:800;
+  line-height:1;
+
+  white-space:nowrap;
+
+  box-shadow:0 5px 14px rgba(16,42,54,.08);
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    background .18s ease;
+}
+
+.header-whatsapp:hover{
+  transform:translateY(-1px);
+  background:#20C65A;
+  box-shadow:0 8px 18px rgba(16,42,54,.12);
+}
+
+.header-whatsapp-icon{
+  display:grid;
+  place-items:center;
+
+  width:22px;
+  height:22px;
+
+  border-radius:50%;
+
+  background:#FFFFFF;
+  color:#168C42;
+
+  font-size:13px;
+  font-weight:900;
+}
+
+@media(max-width:900px){
+
+  .header-inner{
+    grid-template-columns:auto auto 1fr auto !important;
+    gap:14px !important;
+  }
+
+  .header-whatsapp{
+    padding:9px 12px;
+  }
+
+}
+
+@media(max-width:620px){
+
+  .header-inner{
+    grid-template-columns:auto 1fr auto !important;
+    gap:9px !important;
+  }
+
+  .local{
+    display:none !important;
+  }
+
+  .header-whatsapp{
+    min-height:40px;
+    padding:8px 10px;
+
+    font-size:11px;
+    border-radius:8px;
+  }
+
+  .header-whatsapp-icon{
+    width:20px;
+    height:20px;
+    font-size:11px;
+  }
+
+}
+
+</style>
 <body>
 
 <div
@@ -1248,6 +1347,17 @@ h1 em{font-style:normal;color:var(--primary)}
         <strong>à La Réunion</strong>
       </span>
     </div>
+    <a
+  class="header-whatsapp"
+  href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20souhaite%20%C3%A9changer%20avec%20vous%20au%20sujet%20d%27une%20solution%20de%20filtration%20AquaRun."
+  target="_blank"
+  rel="noopener"
+  data-direct-contact="whatsapp"
+  aria-label="Écrire à Marc sur WhatsApp"
+>
+  <span class="header-whatsapp-icon">✆</span>
+  <span>WhatsApp</span>
+</a>
 
   </div>
 </header>
