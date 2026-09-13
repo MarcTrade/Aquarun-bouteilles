@@ -1447,6 +1447,23 @@ h1 em{font-style:normal;color:var(--primary)}
     font-size:10px !important;
   }
 }
+  @media(max-width:620px){
+
+  .header-whatsapp,
+  .header-phone{
+    display:grid !important;
+    grid-template-columns:18px 1fr !important;
+    align-items:center !important;
+    text-align:center !important;
+  }
+
+  .header-whatsapp > span:last-child,
+  .header-phone > span:last-child{
+    display:block;
+    text-align:center !important;
+  }
+
+}
 
 </style>
 </head>
