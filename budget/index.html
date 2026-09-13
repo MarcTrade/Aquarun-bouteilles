@@ -1468,16 +1468,23 @@ h1 em{font-style:normal;color:var(--primary)}
 
   .header-whatsapp,
   .header-phone{
-    position:relative !important;
-    display:flex !important;
-    justify-content:center !important;
+    display:grid !important;
+    grid-template-columns:18px 1fr 18px !important;
     align-items:center !important;
+    column-gap:4px !important;
   }
 
   .header-whatsapp-icon,
   .header-phone-icon{
-    position:absolute !important;
-    left:8px !important;
+    grid-column:1 !important;
+    position:static !important;
+  }
+
+  .header-whatsapp > span:last-child,
+  .header-phone > span:last-child{
+    grid-column:2 !important;
+    text-align:center !important;
+    white-space:nowrap !important;
   }
 
 }
