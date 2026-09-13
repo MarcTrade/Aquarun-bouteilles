@@ -1472,6 +1472,57 @@ h1 em{font-style:normal;color:var(--primary)}
   background:#20C65A;
   box-shadow:0 8px 18px rgba(16,42,54,.12);
 }
+    .header-phone{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+
+  min-height:42px;
+  padding:9px 15px;
+
+  background:#0DBDDB;
+  border:1px solid #0DBDDB;
+  border-radius:8px;
+
+  color:#102A36;
+  text-decoration:none;
+
+  font-size:13px;
+  font-weight:800;
+  line-height:1;
+
+  white-space:nowrap;
+
+  box-shadow:0 5px 14px rgba(16,42,54,.08);
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    background .18s ease;
+}
+
+.header-phone:hover{
+  transform:translateY(-1px);
+  background:#09AEC9;
+  box-shadow:0 8px 18px rgba(16,42,54,.12);
+}
+
+.header-phone-icon{
+  display:grid;
+  place-items:center;
+
+  width:22px;
+  height:22px;
+
+  border-radius:50%;
+
+  background:#FFFFFF;
+  color:#007C9E;
+
+  font-size:12px;
+  font-weight:900;
+}
 
 .header-whatsapp-icon{
   display:grid;
@@ -1492,12 +1543,14 @@ h1 em{font-style:normal;color:var(--primary)}
 @media(max-width:900px){
 
   .header-inner{
-    grid-template-columns:auto auto 1fr auto !important;
-    gap:14px !important;
+    grid-template-columns:auto auto 1fr auto auto !important;
+    gap:10px !important;
   }
 
-  .header-whatsapp{
-    padding:9px 12px;
+  .header-whatsapp,
+  .header-phone{
+    padding:9px 10px;
+    font-size:12px;
   }
 
 }
@@ -1505,26 +1558,28 @@ h1 em{font-style:normal;color:var(--primary)}
 @media(max-width:620px){
 
   .header-inner{
-    grid-template-columns:auto 1fr auto !important;
-    gap:9px !important;
+    grid-template-columns:auto 1fr auto auto !important;
+    gap:7px !important;
   }
 
   .local{
     display:none !important;
   }
 
-  .header-whatsapp{
-    min-height:40px;
-    padding:8px 10px;
+  .header-whatsapp,
+  .header-phone{
+    min-height:38px;
+    padding:7px 8px;
 
-    font-size:11px;
+    font-size:10px;
     border-radius:8px;
   }
 
-  .header-whatsapp-icon{
-    width:20px;
-    height:20px;
-    font-size:11px;
+  .header-whatsapp-icon,
+  .header-phone-icon{
+    width:19px;
+    height:19px;
+    font-size:10px;
   }
 
 }
@@ -1603,6 +1658,15 @@ h1 em{font-style:normal;color:var(--primary)}
 >
   <span class="header-whatsapp-icon">✆</span>
   <span>WhatsApp</span>
+</a>
+    <a
+  class="header-phone"
+  href="tel:+262693415391"
+  data-direct-contact="phone"
+  aria-label="Appeler Marc"
+>
+  <span class="header-phone-icon">☎</span>
+  <span>Appeler Marc</span>
 </a>
 
   </div>
