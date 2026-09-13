@@ -1432,6 +1432,40 @@ h1 em{font-style:normal;color:var(--primary)}
 </style>
 </head>
   <style id="header-whatsapp-final">
+    @media(min-width:901px){
+
+  .header .wrap{
+    width:calc(100% - 48px) !important;
+    max-width:1480px !important;
+  }
+
+  .header-inner{
+    grid-template-columns:auto auto 1fr auto auto !important;
+    gap:24px !important;
+  }
+
+  .brand-block{
+    justify-self:start !important;
+  }
+
+  .mini{
+    justify-self:start !important;
+  }
+
+  .local{
+    justify-self:end !important;
+    margin-right:12px !important;
+  }
+
+  .header-whatsapp{
+    justify-self:end !important;
+  }
+
+  .header-phone{
+    justify-self:end !important;
+  }
+
+}
 
 .header-inner{
   grid-template-columns:auto auto 1fr auto auto !important;
@@ -1623,7 +1657,7 @@ h1 em{font-style:normal;color:var(--primary)}
   </p>
 
   <p class="cookie-banner__text">
-  Avec votre accord, des traceurs Meta sont utilisés pour mesurer l’efficacité de nos publicités.
+  Avec votre accord, on utilise un outil pour mesurer l’efficacité de nos publicités.
 </p>
 
   <div class="cookie-banner__actions">
