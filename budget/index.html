@@ -1291,7 +1291,164 @@ h1 em{font-style:normal;color:var(--primary)}
 
 })();
 </script>
+<style id="header-contact-final">
 
+/* ===== HEADER DESKTOP ===== */
+
+.header-inner{
+  min-height:78px !important;
+  height:auto !important;
+  display:grid !important;
+  grid-template-columns:auto auto 1fr auto auto !important;
+  align-items:center !important;
+  gap:10px !important;
+}
+
+.header-whatsapp,
+.header-phone{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  min-height:40px;
+  padding:9px 13px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:780;
+  white-space:nowrap;
+}
+
+.header-whatsapp{
+  background:#25D366;
+  border:1px solid #25D366;
+  color:#102A36;
+}
+
+.header-phone{
+  background:#0DBDDB;
+  border:1px solid #0DBDDB;
+  color:#102A36;
+}
+
+.header-whatsapp-icon,
+.header-phone-icon{
+  width:20px;
+  height:20px;
+  display:grid;
+  place-items:center;
+  flex:0 0 20px;
+  font-size:11px;
+}
+
+/* Répartition sur toute la largeur sur ordinateur */
+
+@media(min-width:901px){
+
+  .header .wrap{
+    width:calc(100% - 48px) !important;
+    max-width:1480px !important;
+  }
+
+  .header-inner{
+    grid-template-columns:auto auto 1fr auto auto !important;
+    gap:24px !important;
+  }
+
+  .brand-block{
+    justify-self:start !important;
+  }
+
+  .mini{
+    justify-self:start !important;
+  }
+
+  .local{
+    justify-self:end !important;
+    margin-right:12px !important;
+  }
+
+  .header-whatsapp{
+    justify-self:end !important;
+  }
+
+  .header-phone{
+    justify-self:end !important;
+  }
+}
+
+/* ===== TABLETTE ===== */
+
+@media(max-width:900px) and (min-width:621px){
+
+  .header-inner{
+    grid-template-columns:auto auto 1fr auto auto !important;
+    gap:10px !important;
+  }
+
+  .header-whatsapp,
+  .header-phone{
+    padding:9px 10px;
+    font-size:12px;
+  }
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:620px){
+
+  .header-inner{
+    height:auto !important;
+    min-height:72px !important;
+    grid-template-columns:auto 1fr auto !important;
+    grid-template-rows:auto auto !important;
+    column-gap:7px !important;
+    row-gap:5px !important;
+    padding:8px 0 !important;
+  }
+
+  .brand-block{
+    grid-column:1 !important;
+    grid-row:1 / span 2 !important;
+  }
+
+  .mini{
+    grid-column:2 !important;
+    grid-row:1 / span 2 !important;
+  }
+
+  .local{
+    display:none !important;
+  }
+
+  .header-whatsapp{
+    grid-column:3 !important;
+    grid-row:1 !important;
+  }
+
+  .header-phone{
+    grid-column:3 !important;
+    grid-row:2 !important;
+  }
+
+  .header-whatsapp,
+  .header-phone{
+    min-height:34px !important;
+    padding:6px 8px !important;
+    font-size:10px !important;
+    border-radius:8px !important;
+    width:100% !important;
+  }
+
+  .header-whatsapp-icon,
+  .header-phone-icon{
+    width:18px !important;
+    height:18px !important;
+    font-size:10px !important;
+  }
+}
+
+</style>
 </head>
 <body>
 
@@ -1359,6 +1516,28 @@ h1 em{font-style:normal;color:var(--primary)}
       </span>
     </div>
 
+    <a
+      class="header-whatsapp"
+      href="https://wa.me/262693415391?text=Bonjour%20Marc%2C%20je%20souhaite%20%C3%A9changer%20avec%20vous%20au%20sujet%20d%27une%20solution%20de%20filtration%20AquaRun."
+      target="_blank"
+      rel="noopener"
+      data-direct-contact="whatsapp"
+      aria-label="Écrire à Marc sur WhatsApp"
+    >
+      <span class="header-whatsapp-icon">✆</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a
+      class="header-phone"
+      href="tel:+262693415391"
+      data-direct-contact="phone"
+      aria-label="Appeler Marc"
+    >
+      <span class="header-phone-icon">☎</span>
+      <span>Appeler Marc</span>
+    </a>
+
   </div>
 </header>
 <main>
@@ -1420,7 +1599,7 @@ h1 em{font-style:normal;color:var(--primary)}
       <div class="contact-transition-copy">
 
         <p class="contact-transition-title">
-          Si vous souhaitez aller plus loin
+          Vous préférez échanger directement avec moi?
         </p>
 
         <p class="contact-transition-text">
