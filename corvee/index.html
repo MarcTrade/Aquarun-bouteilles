@@ -1525,17 +1525,21 @@ h1 em{font-style:normal;color:var(--primary)}
 }
   @media(max-width:620px){
 
-  .header-inner{
-    grid-template-columns:auto minmax(0,1fr) 108px !important;
-  }
-
   .header-whatsapp,
   .header-phone{
-    width:108px !important;
-    max-width:108px !important;
-    min-width:108px !important;
+    width:auto !important;
+    min-width:0 !important;
+    padding:5px 6px !important;
+    font-size:9px !important;
+    min-height:32px !important;
     justify-self:end !important;
-    box-sizing:border-box !important;
+  }
+
+  .header-whatsapp-icon,
+  .header-phone-icon{
+    width:16px !important;
+    height:16px !important;
+    font-size:9px !important;
   }
 
 }
