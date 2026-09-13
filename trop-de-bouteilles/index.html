@@ -1349,82 +1349,117 @@ h1 em{font-style:normal;color:var(--primary)}
 </style>
   <style id="section4-bio-equilibre-final">
 
-#conseil .photo-card{
-  display:grid !important;
-  grid-template-columns:minmax(190px,.9fr) minmax(0,1.1fr) !important;
-  gap:24px !important;
-  align-items:center !important;
-  padding:28px !important;
+/* ===== ORDINATEUR : IDENTIQUE À TROP DE BOUTEILLES ===== */
+
+@media(min-width:901px){
+
+  #conseil .advisor{
+    display:grid !important;
+    grid-template-columns:1.15fr .85fr !important;
+    gap:32px !important;
+    align-items:stretch !important;
+  }
+
+  #conseil .advisor-main{
+    width:auto !important;
+    min-width:0 !important;
+  }
+
+  #conseil .photo-card{
+    width:auto !important;
+    min-width:0 !important;
+    display:grid !important;
+    grid-template-columns:.9fr 1.1fr !important;
+    gap:20px !important;
+    align-items:center !important;
+    padding:26px !important;
+  }
+
+  #conseil .photo-slot{
+    width:auto !important;
+    height:260px !important;
+    min-height:260px !important;
+  }
+
+  #conseil .photo-text{
+    display:block !important;
+    width:auto !important;
+    min-width:0 !important;
+  }
+
+  #conseil .photo-text p{
+    font-size:14px !important;
+    line-height:1.55 !important;
+  }
+
+  #conseil .direct-contact-panel{
+    margin-top:20px !important;
+    padding:16px !important;
+  }
+
+  #conseil .direct-contact-actions{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:10px !important;
+    width:100% !important;
+  }
+
+  #conseil .direct-contact-btn{
+    width:100% !important;
+    min-width:0 !important;
+    min-height:48px !important;
+    padding:10px 8px !important;
+    font-size:13px !important;
+  }
+
 }
 
-#conseil .photo-slot{
-  height:280px !important;
-  min-height:280px !important;
-}
 
-#conseil .photo-text{
-  display:flex !important;
-  flex-direction:column !important;
-  justify-content:center !important;
-}
-
-#conseil .photo-text p:first-child{
-  margin:0 0 16px !important;
-}
-
-#conseil .photo-text p:last-child{
-  margin:0 !important;
-  font-size:15px !important;
-  line-height:1.55 !important;
-}
+/* ===== MOBILE : ON CONSERVE TON RENDU VALIDÉ ===== */
 
 @media(max-width:620px){
 
-  #conseil .photo-card{
+  #conseil .advisor{
+    display:grid !important;
     grid-template-columns:1fr !important;
+    width:100% !important;
+  }
+
+  #conseil .photo-card{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    width:100% !important;
+    min-width:0 !important;
     gap:18px !important;
     padding:20px !important;
   }
 
   #conseil .photo-slot{
+    width:100% !important;
     height:260px !important;
     min-height:260px !important;
   }
 
-}
-
-</style>
-  <style id="espacement-4-module-5-final">
-
-/* Section 4 → module */
-#conseil{
-  padding-bottom:18px !important;
-}
-
-/* Module intermédiaire */
-.contact-transition-section{
-  padding-top:0 !important;
-  padding-bottom:18px !important;
-}
-
-/* Module → section 5 */
-#formulaire{
-  padding-top:30px !important;
-}
-
-@media(max-width:620px){
-
-  #conseil{
-    padding-bottom:14px !important;
+  #conseil .photo-text{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    min-width:0 !important;
   }
 
-  .contact-transition-section{
-    padding-top:0 !important;
-    padding-bottom:14px !important;
+  #conseil .direct-contact-actions{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:8px !important;
+    width:100% !important;
   }
 
-  #formulaire{
-    padding-top:24px !important;
+  #conseil .direct-contact-btn{
+    width:100% !important;
+    min-width:0 !important;
+    min-height:46px !important;
+    padding:9px 5px !important;
+    font-size:12px !important;
   }
 
 }
