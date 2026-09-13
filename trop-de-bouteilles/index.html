@@ -1721,12 +1721,14 @@ function loadClarity(){
 }
 }
 .brand-local{
-  display:none;
+  .brand-local{
+    display:none !important;
+}
 }
 
 @media(max-width:620px){
   .brand-local{
-    display:block;
+    display:block !important;
     margin-top:3px;
     font-size:7px;
     line-height:1.1;
