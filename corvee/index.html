@@ -1523,6 +1523,22 @@ h1 em{font-style:normal;color:var(--primary)}
   }
 
 }
+  @media(max-width:620px){
+
+  .header-inner{
+    grid-template-columns:auto minmax(0,1fr) 108px !important;
+  }
+
+  .header-whatsapp,
+  .header-phone{
+    width:108px !important;
+    max-width:108px !important;
+    min-width:108px !important;
+    justify-self:end !important;
+    box-sizing:border-box !important;
+  }
+
+}
 </style>
 
 </head>
