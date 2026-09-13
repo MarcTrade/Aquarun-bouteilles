@@ -1231,7 +1231,21 @@ h1 em{font-style:normal;color:var(--primary)}
     fbq('track','PageView');
 
   }
+function loadClarity(){
+    if(window.__aquarunClarityLoaded) return;
+    window.__aquarunClarityLoaded = true;
 
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){
+            (c[a].q=c[a].q||[]).push(arguments);
+        };
+        t=l.createElement(r);
+        t.async=1;
+        t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","yhtma1p68t");
+}
   window.aquarunMetaConsent={
 
     accept:function(){
@@ -1242,6 +1256,7 @@ h1 em{font-style:normal;color:var(--primary)}
       if(banner)banner.hidden=true;
 
       loadMetaPixel();
+      loadClarity();
 
     },
 
@@ -1276,6 +1291,7 @@ h1 em{font-style:normal;color:var(--primary)}
 
       if(banner)banner.hidden=true;
       loadMetaPixel();
+      loadClarity();
 
     }else if(consent==='refused'){
 
