@@ -1499,7 +1499,30 @@ h1 em{font-style:normal;color:var(--primary)}
   }
 
 }
+@media(max-width:620px){
 
+  .header-whatsapp,
+  .header-phone{
+    display:grid !important;
+    grid-template-columns:18px 1fr 18px !important;
+    align-items:center !important;
+    column-gap:4px !important;
+  }
+
+  .header-whatsapp-icon,
+  .header-phone-icon{
+    grid-column:1 !important;
+    position:static !important;
+  }
+
+  .header-whatsapp > span:last-child,
+  .header-phone > span:last-child{
+    grid-column:2 !important;
+    text-align:center !important;
+    white-space:nowrap !important;
+  }
+
+}
 </style>
 
 </head>
@@ -1799,7 +1822,7 @@ h1 em{font-style:normal;color:var(--primary)}
       <div class="contact-transition-copy">
 
         <p class="contact-transition-title">
-          Si vous souhaitez aller plus loin
+          Si vous souhaitez échanger directement avec moi:
         </p>
 
         <p class="contact-transition-text">
