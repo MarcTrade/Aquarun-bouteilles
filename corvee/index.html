@@ -1101,17 +1101,22 @@ h1 em{font-style:normal;color:var(--primary)}
 
 .cookie-banner{
   position:fixed;
-  left:16px;
-  right:16px;
-  bottom:16px;
+  left:10px;
+  right:10px;
+  bottom:8px;
   z-index:9999;
-  max-width:560px;
+
+  max-width:440px;
   margin:0 auto;
-  padding:14px 16px;
+
+  padding:7px 9px;
+
   background:#FFFFFF;
   border:1px solid #DCE9ED;
-  border-radius:10px;
-  box-shadow:0 10px 30px rgba(16,42,54,.14);
+  border-radius:8px;
+
+  box-shadow:0 6px 18px rgba(16,42,54,.10);
+
   color:#131618;
 }
 
@@ -1120,32 +1125,40 @@ h1 em{font-style:normal;color:var(--primary)}
 }
 
 .cookie-banner__title{
-  margin:0 0 4px;
+  margin:0 0 1px;
+
   color:#102A36;
-  font-size:14px;
+
+  font-size:11.5px;
+  line-height:1.2;
   font-weight:800;
 }
 
 .cookie-banner__text{
-  margin:0 0 14px;
+  margin:0 0 5px;
+
   color:#4B5F67;
-  font-size:13px;
-  line-height:1.5;
+
+  font-size:10.5px;
+  line-height:1.25;
 }
 
 .cookie-banner__actions{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:10px;
+  gap:6px;
 }
 
 .cookie-banner__btn{
-  min-height:40px;
-  padding:8px 12px;
-  border-radius:8px;
+  min-height:30px;
+  padding:5px 8px;
+
+  border-radius:6px;
+
   font:inherit;
-  font-size:12.5px;
+  font-size:10.5px;
   font-weight:780;
+
   cursor:pointer;
 }
 
@@ -1164,10 +1177,13 @@ h1 em{font-style:normal;color:var(--primary)}
 .cookie-settings{
   border:0;
   padding:0;
+
   background:none;
   color:#007C9E;
+
   font:inherit;
-  font-size:12px;
+  font-size:10.5px;
+
   text-decoration:underline;
   cursor:pointer;
 }
@@ -1175,14 +1191,36 @@ h1 em{font-style:normal;color:var(--primary)}
 @media(max-width:620px){
 
   .cookie-banner{
-    left:12px;
-    right:12px;
-    bottom:12px;
-    padding:16px;
+    left:6px;
+    right:6px;
+    bottom:6px;
+
+    max-width:none;
+
+    padding:6px 8px;
+    border-radius:7px;
+  }
+
+  .cookie-banner__title{
+    font-size:11px;
+    margin-bottom:1px;
+  }
+
+  .cookie-banner__text{
+    font-size:10px;
+    line-height:1.2;
+    margin-bottom:5px;
   }
 
   .cookie-banner__actions{
     grid-template-columns:1fr 1fr;
+    gap:5px;
+  }
+
+  .cookie-banner__btn{
+    min-height:28px;
+    padding:4px 6px;
+    font-size:10px;
   }
 
 }
